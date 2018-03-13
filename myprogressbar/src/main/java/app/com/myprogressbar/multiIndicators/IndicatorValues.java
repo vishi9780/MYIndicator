@@ -24,6 +24,7 @@ import app.com.myprogressbar.multiIndicators.indicators.LineScalePartyIndicator;
 import app.com.myprogressbar.multiIndicators.indicators.LineScalePulseOutIndicator;
 import app.com.myprogressbar.multiIndicators.indicators.LineScalePulseOutRapidIndicator;
 import app.com.myprogressbar.multiIndicators.indicators.LineSpinFadeLoaderIndicator;
+import app.com.myprogressbar.multiIndicators.indicators.MyCustomIndicator;
 import app.com.myprogressbar.multiIndicators.indicators.PacmanIndicator;
 import app.com.myprogressbar.multiIndicators.indicators.SemiCircleSpinIndicator;
 import app.com.myprogressbar.multiIndicators.indicators.SquareSpinIndicator;
@@ -62,5 +63,5 @@ public interface IndicatorValues {
     BallGridBeatIndicator DEFAULT_026_29=new BallGridBeatIndicator();
     SemiCircleSpinIndicator DEFAULT_027_30=new SemiCircleSpinIndicator();
     LineScalePulseOutRapidIndicator DEFAULT_028_31=new LineScalePulseOutRapidIndicator();
-
+    MyCustomIndicator DEFAULT_029_32 = new MyCustomIndicator();
 }

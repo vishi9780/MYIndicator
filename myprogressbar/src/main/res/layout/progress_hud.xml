@@ -13,27 +13,32 @@
             android:id="@+id/spinner_loading"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_gravity="center"
             android:visibility="gone"/>
     <ImageView
         android:id="@+id/spinnerImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/spinner"
+        android:layout_gravity="center"
         android:visibility="gone"/>
 
     <app.com.myprogressbar.myBall.MyBallCradleLoading
         android:id="@+id/myBallCradleLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:visibility="gone"/>
     <app.com.myprogressbar.rotate.RotateLoading
         android:id="@+id/rotateLoading"
         android:layout_width="65dp"
         android:layout_height="65dp"
+        android:layout_gravity="center"
         android:visibility="gone"/>
     <app.com.myprogressbar.multiIndicators.IndicatorView
         android:id="@+id/myIndicator_vw"
         android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:visibility="gone"
         android:layout_height="wrap_content" />
     <TextView

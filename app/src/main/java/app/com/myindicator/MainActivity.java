@@ -33,13 +33,13 @@ public class MainActivity extends MainActivity2{
             public void onClick(View v) {
                 switch (counter) {
                     case 0:
-                        myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
-                                true, false, null, 10);
+                        myProgressBar = MyProgressBar.show(MainActivity.this, "",
+                                true, false, null, 32);
                         Log.e(TAG,"<<0>>");
                         counter++;
                         break;
                     case 1:
-                        myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
+                        myProgressBar = MyProgressBar.show(MainActivity.this, "",
                                 true, false, null, 11);
                         counter++;
                         Log.e(TAG,"<<1>>");

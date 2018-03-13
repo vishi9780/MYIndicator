@@ -333,6 +333,19 @@ public class SettingIndicatorHere {
                 MyProgressBar.myIndicator_vw.setVisibility(View.VISIBLE);
                 MyProgressBar.myIndicator_vw.setmyIndicator(31);
                 break;
+                case 32:
+                MyProgressBar.spinner_loading.setVisibility(View.GONE);
+                MyProgressBar.imageView.setVisibility(View.GONE);
+                MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
+                MyProgressBar.rotateLoading.setVisibility(View.GONE);
+                    if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                        MyProgressBar.ll_parent.setBackgroundDrawable(ContextCompat.getDrawable(context, android.R.color.transparent) );
+                    } else {
+                        MyProgressBar.ll_parent.setBackground(ContextCompat.getDrawable(context, android.R.color.transparent));
+                    }
+                MyProgressBar.myIndicator_vw.setVisibility(View.VISIBLE);
+                MyProgressBar.myIndicator_vw.setmyIndicator(32);
+                break;
             default:
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.VISIBLE);

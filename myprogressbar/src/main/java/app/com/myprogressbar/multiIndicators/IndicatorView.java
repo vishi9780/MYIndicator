@@ -204,6 +204,11 @@ public class IndicatorView extends View {
             case 31:
                 setIndicator(IndicatorValues.DEFAULT_028_31);
                 break;
+            case 32:
+                setIndicatorColor(Color.CYAN);
+                setIndicator(IndicatorValues.DEFAULT_029_32);
+                break;
+
                 default:
                     Log.e("208","<<<IndicatorView>>>"+"<<<Default Value");
                 break;
