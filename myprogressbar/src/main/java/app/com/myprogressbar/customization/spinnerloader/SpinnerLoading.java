@@ -21,7 +21,7 @@ import app.com.myprogressbar.customization.spinnerloader.utils.SpinnerLoadingUti
 
 
 /***
- * Created by Vishal Yadav :- 131320180903HRS
+ * Created by Vishal Yadav :- 173020181303HRS
  */
 public class SpinnerLoading extends View implements CallbackAnimation.TransformationListener {
     public static final int DEFAULT_DURATION = 900;

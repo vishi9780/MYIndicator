@@ -11,9 +11,8 @@ import android.view.View;
 import app.com.myprogressbar.R;
 
 
-/**
- * @author Yan
- *         create at 15/8/9
+/***
+ * Created by Vishal Yadav :- 173020181303HRS
  */
 public class MyBall extends View {
 

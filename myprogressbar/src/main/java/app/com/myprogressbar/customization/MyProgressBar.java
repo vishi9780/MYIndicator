@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import app.com.myprogressbar.R;
 import app.com.myprogressbar.customization.spinnerloader.SpinnerLoading;
+import app.com.myprogressbar.multiIndicators.IndicatorView;
 import app.com.myprogressbar.myBall.MyBallCradleLoading;
 import app.com.myprogressbar.rotate.RotateLoading;
 
@@ -19,8 +20,9 @@ import static app.com.myprogressbar.customization.SettingIndicatorHere.setIndica
 
 
 /***
- * Created by Vishal Yadav :- 131320180803HRS
+ * Created by Vishal Yadav :- 173020181303HRS
  */
+
 public class MyProgressBar extends Dialog {
     public static MyBallCradleLoading myBallCradleLoading;
     public static LinearLayout ll_parent;
@@ -30,6 +32,7 @@ public class MyProgressBar extends Dialog {
     public static RotateLoading rotateLoading;
     public static boolean isIs_0=false,isIs_1=false,isIs_2=false,isIs_3=false;
     public static MyProgressBar dialog;
+    public static IndicatorView myIndicator_vw;
     public MyProgressBar(Context context) {
         super(context);
     }
@@ -75,6 +78,7 @@ public class MyProgressBar extends Dialog {
         rotateLoading=(RotateLoading) dialog.findViewById(R.id.rotateLoading);
         imageView = (ImageView)dialog. findViewById(R.id.spinnerImageView);
         spinner_loading = (SpinnerLoading)dialog. findViewById(R.id.spinner_loading);
+        myIndicator_vw=(IndicatorView)dialog.findViewById(R.id.myIndicator_vw);
     }
 
     @Override

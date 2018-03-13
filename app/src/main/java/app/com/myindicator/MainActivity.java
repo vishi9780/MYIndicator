@@ -1,6 +1,6 @@
 package app.com.myindicator;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,49 +14,85 @@ import app.com.myprogressbar.customization.MyProgressBar;
 
 
 /***
- * Created by Vishal Yadav :- 131320180803HRS
+ * Created by Vishal Yadav :- 173020181303HRS
  */
-public class MainActivity extends AppCompatActivity {
-    MyProgressBar myProgressBar;
+public class MainActivity extends MainActivity2{
     public static final String TAG=MainActivity.class.getSimpleName();
+    private ScheduledExecutorService scheduleTaskExecutor;
     LinearLayout ll_parent;
     public static int counter=0;
-    private ScheduledExecutorService scheduleTaskExecutor;
+    MyProgressBar myProgressBar;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //use this to display the Progress
-        myProgressBar= new MyProgressBar(MainActivity.this,0);
         ll_parent = (LinearLayout) findViewById(R.id.ll_parent);
+
         ll_parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch (counter) {
                     case 0:
                         myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
-                                true, false, null, 0);
+                                true, false, null, 10);
                         Log.e(TAG,"<<0>>");
                         counter++;
                         break;
                     case 1:
                         myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
-                                true, false, null, 1);
+                                true, false, null, 11);
                         counter++;
                         Log.e(TAG,"<<1>>");
                         break;
                     case 2:
                         myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
-                                true, false, null, 2);
+                                true, false, null, 12);
                         counter++;
                         Log.e(TAG,"<<2>>");
                         break;
                     case 3:
 
                         myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
-                                true, false, null, 3);
+                                true, false, null, 13);
                         counter++;
                         Log.e(TAG,"<<3>>");
+                        break;
+                    case 4:
+                        myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
+                                true, false, null, 14);
+                        counter++;
+                        Log.e(TAG,"<<"+counter+">>");
+                        break;
+                    case 5:
+                        myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
+                                true, false, null, 0);
+                        Log.e(TAG,"<<0>>");
+                        counter++;
+                        break;
+                    case 6:
+                        myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
+                                true, false, null, 1);
+                        counter++;
+                        Log.e(TAG,"<<1>>");
+                        break;
+                    case 7:
+                        myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
+                                true, false, null, 2);
+                        counter++;
+                        Log.e(TAG,"<<2>>");
+                        break;
+                    case 8:
+
+                        myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
+                                true, false, null, 8);
+                        counter++;
+                        Log.e(TAG,"<<3>>");
+                        break;
+                    case 9:
+                        myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
+                                true, false, null, 9);
+                        counter++;
+                        Log.e(TAG,"<<"+counter+">>");
                         break;
                 }
             }
@@ -68,34 +104,30 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-        /**
-         * dismiss the progress bar
-         *   if (mProgressHUD.isShowing()) {
-         *       mProgressHUD.dismiss();
-         *    }
-         */
-        scheduleTaskExecutor = Executors.newScheduledThreadPool(5);
+        scheduleTaskExecutor = Executors.newScheduledThreadPool(10);
 
 
-            scheduleTaskExecutor.scheduleAtFixedRate(new Runnable() {
-                @Override
-                public void run() {
-                    // Do stuff here!
+        scheduleTaskExecutor.scheduleAtFixedRate(new Runnable() {
+            @Override
+            public void run() {
+                // Do stuff here!
 
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                if (myProgressBar.isShowing()) {
-                                    myProgressBar.dismiss();
-                                }
-                            } catch (Exception e) {
-                                Log.e("98", "<<<>>>>" + e);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            if (myProgressBar.isShowing()) {
+                                myProgressBar.dismiss();
                             }
+                        } catch (Exception e) {
+                            Log.e("98", "<<<>>>>" + e);
                         }
-                    });
+                    }
+                });
 
-                }
-            }, 0, 5, TimeUnit.SECONDS); // or .MINUTES, .HOURS etc.
+            }
+        }, 0, 30,TimeUnit.SECONDS);
     }
 }
+
+

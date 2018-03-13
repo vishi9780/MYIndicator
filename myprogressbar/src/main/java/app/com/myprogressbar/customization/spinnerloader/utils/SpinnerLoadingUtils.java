@@ -1,7 +1,7 @@
 package app.com.myprogressbar.customization.spinnerloader.utils;
 
 /***
- * Created by Vishal Yadav :- 131320180903HRS
+ * Created by Vishal Yadav :- 173020181303HRS
  */
 public class SpinnerLoadingUtils {
     public static  float[] getVector(float radians, float length) {

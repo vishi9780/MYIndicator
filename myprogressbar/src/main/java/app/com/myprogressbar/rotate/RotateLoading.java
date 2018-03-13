@@ -19,7 +19,7 @@ import app.com.myprogressbar.R;
 
 /**
  * RotateLoading
- * Created by Victor on 2015/4/28.
+ * Created by Vishal Yadav :- 173020181303HRS
  */
 public class RotateLoading extends View {
 

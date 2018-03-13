@@ -8,5 +8,8 @@
     android:id="@+id/ll_parent"
     tools:context="app.com.myindicator.MainActivity">
 
-
+    <app.com.myprogressbar.multiIndicators.IndicatorView
+        android:id="@+id/indicatorViw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
