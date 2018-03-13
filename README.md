@@ -39,5 +39,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</br>
 
 
-</br>![Alt Text](https://github.com/vishi9780/MYIndicator/blob/master/screenshot/Myindicator.gif)</br>
+</br>![Alt Text](https://github.com/vishi9780/MYIndicator/blob/master/screenshot/myUpdated.gif)</br>
 
