@@ -52,7 +52,7 @@ public class MainActivity extends MainActivity2{
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                                if (counter<40)
+                                if (counter<=38)
                                 myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
                                         true, false, null, counter);
                                 counter++;
