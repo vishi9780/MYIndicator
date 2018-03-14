@@ -35,6 +35,7 @@ import app.com.myprogressbar.multiIndicators.indicators.TriangleSkewSpinIndicato
  */
 
 public interface IndicatorValues {
+
     BallBeatIndicator DEFAULT_001_4=new BallBeatIndicator();
     BallPulseIndicator DEFAULT_002_5=new BallPulseIndicator();
     BallGridPulseIndicator DEFAULT_003_6=new BallGridPulseIndicator();

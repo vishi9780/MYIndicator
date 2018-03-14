@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import app.com.myprogressbar.R;
+import app.com.myprogressbar.vy.VYLoader;
 import app.com.myprogressbar.customization.spinnerloader.SpinnerLoading;
 import app.com.myprogressbar.multiIndicators.IndicatorView;
 import app.com.myprogressbar.myBall.MyBallCradleLoading;
@@ -25,6 +26,7 @@ import static app.com.myprogressbar.customization.SettingIndicatorHere.setIndica
 
 public class MyProgressBar extends Dialog {
     public static MyBallCradleLoading myBallCradleLoading;
+    public static VYLoader vy_loader;
     public static LinearLayout ll_parent;
     public static TextView txt;
     public static ImageView imageView;
@@ -57,7 +59,7 @@ public class MyProgressBar extends Dialog {
         dialog.setOnCancelListener(cancelListener);
         dialog.getWindow().getAttributes().gravity = Gravity.CENTER;
         WindowManager.LayoutParams lp = dialog.getWindow().getAttributes();
-        lp.dimAmount = 0.2f;
+        lp.dimAmount = 0.8f;
         dialog.getWindow().setAttributes(lp);
         dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
 
@@ -74,11 +76,15 @@ public class MyProgressBar extends Dialog {
     private static void initViews(MyProgressBar dialog) {
         ll_parent= (LinearLayout) dialog. findViewById(R.id.ll_parent);
         txt = (TextView) dialog.findViewById(R.id.message);
+
+
         myBallCradleLoading=(MyBallCradleLoading)dialog.findViewById(R.id.myBallCradleLoading);
         rotateLoading=(RotateLoading) dialog.findViewById(R.id.rotateLoading);
         imageView = (ImageView)dialog. findViewById(R.id.spinnerImageView);
         spinner_loading = (SpinnerLoading)dialog. findViewById(R.id.spinner_loading);
         myIndicator_vw=(IndicatorView)dialog.findViewById(R.id.myIndicator_vw);
+        vy_loader=(VYLoader)dialog.findViewById(R.id.vy_loader);
+
     }
 
     @Override

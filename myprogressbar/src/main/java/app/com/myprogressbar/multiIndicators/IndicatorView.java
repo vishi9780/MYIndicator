@@ -83,7 +83,7 @@ public class IndicatorView extends View {
 
     public IndicatorView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context, attrs,defStyleAttr,R.style.IndicatorView);
+        init(context, attrs,defStyleAttr, R.style.IndicatorView);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -205,7 +205,7 @@ public class IndicatorView extends View {
                 setIndicator(IndicatorValues.DEFAULT_028_31);
                 break;
             case 32:
-                setIndicatorColor(Color.CYAN);
+                setIndicatorColor(Color.WHITE);
                 setIndicator(IndicatorValues.DEFAULT_029_32);
                 break;
 

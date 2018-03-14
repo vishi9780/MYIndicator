@@ -25,11 +25,11 @@ public class MyBallCradleLoading extends LinearLayout {
     private MyBall myBallFour;
     private MyBall myBallFive;
 
-    private static final int DURATION = 400;
-    private static final int SHAKE_DISTANCE = 2;
+    private static final int DURATION = 310;
+    private static final int SHAKE_DISTANCE = 4;
     private static final float PIVOT_X = 0.5f;
-    private static final float PIVOT_Y = -3f;
-    private static final int DEGREE = 30;
+    private static final float PIVOT_Y = -5f;
+    private static final int DEGREE = 9;
 
 
     private boolean isStart = false;

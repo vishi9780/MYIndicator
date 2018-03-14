@@ -13,4 +13,7 @@
         <attr name="shadow_position" format="integer"/>
         <attr name="loading_speed" format="integer"/>
     </declare-styleable>
+    <declare-styleable name="VYLoader">
+        <attr name="VY_color" format="color"/>
+    </declare-styleable>
 </resources>

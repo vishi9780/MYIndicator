@@ -26,8 +26,10 @@ import app.com.myprogressbar.customization.spinnerloader.utils.SpinnerLoadingUti
 public class SpinnerLoading extends View implements CallbackAnimation.TransformationListener {
     public static final int DEFAULT_DURATION = 900;
     public static final int DEFAULT_itemCount = 8;
-    public static final int DEFAULT_CIRCLE_COLOR = 0xff33A7ff;
-    public static final int DEFAULT_CIRCLE_COLOR_MOVE = 0xff33A7ff;
+    public static final int DEFAULT_CIRCLE_COLOR = Color.WHITE;
+    public static final int DEFAULT_CIRCLE_COLOR_MOVE = Color.WHITE;
+//    public static final int DEFAULT_CIRCLE_COLOR = 0xff33A7ff;
+//    public static final int DEFAULT_CIRCLE_COLOR_MOVE = 0xff33A7ff;
     public static final float DEFAULT_SCALE_RATE = 0.2f;
     public static final int DEFAULT_RADIUS = 20;
     public static final int DEFAULT_WIDTH_FACTOR = 14;

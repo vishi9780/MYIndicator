@@ -67,14 +67,14 @@ public class RotateLoading extends View {
     }
 
     private void initView(Context context, AttributeSet attrs) {
-        color = getResources().getColor(android.R.color.holo_orange_light);
+        color = getResources().getColor(android.R.color.white);
         width = dpToPx(context, DEFAULT_WIDTH);
         shadowPosition = dpToPx(getContext(), DEFAULT_SHADOW_POSITION);
         speedOfDegree = DEFAULT_SPEED_OF_DEGREE;
 
         if (null != attrs) {
             TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RotateLoading);
-            color = typedArray.getColor(R.styleable.RotateLoading_loading_color,getResources().getColor(android.R.color.holo_orange_light));
+            color = typedArray.getColor(R.styleable.RotateLoading_loading_color,getResources().getColor(android.R.color.white));
             width = typedArray.getDimensionPixelSize(R.styleable.RotateLoading_loading_width, dpToPx(context, DEFAULT_WIDTH));
             shadowPosition = typedArray.getInt(R.styleable.RotateLoading_shadow_position, DEFAULT_SHADOW_POSITION);
             speedOfDegree = typedArray.getInt(R.styleable.RotateLoading_loading_speed, DEFAULT_SPEED_OF_DEGREE);
