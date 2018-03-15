@@ -55,6 +55,7 @@ public class Sharingan extends LoaderView {
 
   @Override
   public void setUpAnimation() {
+    try{
     ValueAnimator rotateAnimator = ValueAnimator.ofFloat(0, 360);
     rotateAnimator.setDuration(1500);
     rotateAnimator.setRepeatCount(ValueAnimator.INFINITE);
@@ -84,10 +85,14 @@ public class Sharingan extends LoaderView {
     AnimatorSet animatorSet = new AnimatorSet();
     animatorSet.play(rotateAnimator).with(scaleAnimator);
     animatorSet.start();
+    }catch (Exception e){
+      e.printStackTrace();
+    }
   }
 
   @Override
   public void draw(Canvas canvas) {
+    try{
     canvas.save();
     canvas.scale(scale, scale, center.x, center.y);
     canvas.rotate(rotate, center.x, center.y);
@@ -100,5 +105,9 @@ public class Sharingan extends LoaderView {
       canvas.restore();
     }
     canvas.restore();
+    }catch (Exception e){
+      e.printStackTrace();
+    }
   }
+
 }

@@ -37,6 +37,7 @@ public class Worm extends LoaderView {
 
   @Override
   public void setUpAnimation() {
+    try{
     for (int i = 0; i < circlesSize; i++) {
       final int index = i;
       ValueAnimator translateAnimator = ValueAnimator.ofFloat(center.y, height / 4f, height * 3 / 4f, center.y);
@@ -55,15 +56,22 @@ public class Worm extends LoaderView {
 
       translateAnimator.start();
     }
+    }catch (Exception e){
+      e.printStackTrace();
+    }
   }
 
   @Override
   public void draw(Canvas canvas) {
+    try{
     for (int i = 0; i < circlesSize; i++) {
       canvas.save();
       canvas.translate(2 * radius * transformations[i], 0);
       circles[i].draw(canvas);
       canvas.restore();
+    }
+    }catch (Exception e){
+      e.printStackTrace();
     }
   }
 }

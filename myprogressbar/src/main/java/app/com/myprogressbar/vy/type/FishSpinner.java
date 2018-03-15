@@ -60,11 +60,15 @@ public class FishSpinner extends LoaderView {
 
   @Override
   public void draw(Canvas canvas) {
-    for (int i = 0; i < numberOfCircle; i++) {
-      canvas.save();
-      canvas.rotate(rotates[i], center.x, center.y);
-      circles[i].draw(canvas);
-      canvas.restore();
+    try {
+      for (int i = 0; i < numberOfCircle; i++) {
+        canvas.save();
+        canvas.rotate(rotates[i], center.x, center.y);
+        circles[i].draw(canvas);
+        canvas.restore();
+      }
+    }catch (Exception e){
+      e.printStackTrace();
     }
   }
 }

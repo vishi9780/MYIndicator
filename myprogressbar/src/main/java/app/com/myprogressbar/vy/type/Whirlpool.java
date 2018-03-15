@@ -42,34 +42,42 @@ public class Whirlpool extends LoaderView {
 
   @Override
   public void setUpAnimation() {
-    for (int i = numberOfArc - 1; i >= 0; i--) {
-      final int index = i;
+    try {
+      for (int i = numberOfArc - 1; i >= 0; i--) {
+        final int index = i;
 
-      ValueAnimator fadeAnimator = ValueAnimator.ofFloat(arcs[i].getStartAngle(),
-          arcs[i].getStartAngle() + 360* (i % 2 == 0 ? -1 : 1));
-      fadeAnimator.setRepeatCount(ValueAnimator.INFINITE);
-      fadeAnimator.setDuration((i + 1) * 500);
-      fadeAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-        @Override
-        public void onAnimationUpdate(ValueAnimator animation) {
-          rotates[index] = (float)animation.getAnimatedValue();
-          if (invalidateListener != null) {
-            invalidateListener.reDraw();
+        ValueAnimator fadeAnimator = ValueAnimator.ofFloat(arcs[i].getStartAngle(),
+                arcs[i].getStartAngle() + 360 * (i % 2 == 0 ? -1 : 1));
+        fadeAnimator.setRepeatCount(ValueAnimator.INFINITE);
+        fadeAnimator.setDuration((i + 1) * 500);
+        fadeAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+          @Override
+          public void onAnimationUpdate(ValueAnimator animation) {
+            rotates[index] = (float) animation.getAnimatedValue();
+            if (invalidateListener != null) {
+              invalidateListener.reDraw();
+            }
           }
-        }
-      });
+        });
 
-      fadeAnimator.start();
+        fadeAnimator.start();
+      }
+    }catch (Exception e){
+      e.printStackTrace();
     }
   }
 
   @Override
   public void draw(Canvas canvas) {
+    try{
     for (int i = 0; i < numberOfArc; i++) {
       canvas.save();
       canvas.rotate(rotates[i], center.x, center.y);
       arcs[i].draw(canvas);
       canvas.restore();
+    }
+    }catch (Exception e){
+      e.printStackTrace();
     }
   }
 }

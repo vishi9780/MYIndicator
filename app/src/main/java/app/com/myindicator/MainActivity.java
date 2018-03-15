@@ -52,16 +52,21 @@ public class MainActivity extends MainActivity2{
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                                if (counter<=38)
+//                                if (counter==0){
+                                if (counter<=39)
                                 myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
                                         true, false, null, counter);
                                 counter++;
                                 Log.e(TAG, "onClick:38>>>"+counter);
+                               /* }else {
+                                    myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
+                                            true, false, null, 39);
+                                }*/
                     }
                 });
 
             }
-        }, 0, 3,TimeUnit.SECONDS);
+        }, 0, 5,TimeUnit.SECONDS);
     }
 }
 

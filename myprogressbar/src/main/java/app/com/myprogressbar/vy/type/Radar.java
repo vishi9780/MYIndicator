@@ -28,6 +28,7 @@ public class Radar extends LoaderView {
 
   @Override
   public void setUpAnimation() {
+    try{
     ValueAnimator animator = ValueAnimator.ofFloat(0, 359);
     animator.setDuration(1000);
     animator.setRepeatCount(ValueAnimator.INFINITE);
@@ -42,6 +43,9 @@ public class Radar extends LoaderView {
     });
 
     animator.start();
+  }catch (Exception e){
+    e.printStackTrace();
+  }
   }
 
   @Override

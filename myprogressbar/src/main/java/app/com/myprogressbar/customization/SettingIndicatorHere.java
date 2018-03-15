@@ -51,18 +51,15 @@ public class SettingIndicatorHere {
                 spinner.start();
                 break;
             case 2:
-                MyProgressBar.isIs_0=false;
-                MyProgressBar.isIs_1=false;
-                MyProgressBar.isIs_2=true;
-                MyProgressBar.isIs_3=false;
-                MyProgressBar.txt.setVisibility(View.GONE);
+                myStaticValue=7;
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
+                MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
                 MyProgressBar.rotateLoading.setVisibility(View.GONE);
-                MyProgressBar.vy_loader.setVisibility(View.GONE);
 
-                MyProgressBar.myBallCradleLoading.setVisibility(View.VISIBLE);
-                MyProgressBar.myBallCradleLoading.start();
+                MyProgressBar.vy_loader.setVisibility(View.VISIBLE);
+
+
                 break;
             case 3:
                 MyProgressBar.isIs_0=false;
@@ -423,13 +420,18 @@ public class SettingIndicatorHere {
                 MyProgressBar.vy_loader.setVisibility(View.VISIBLE);
                 break;
             case 39:
-                myStaticValue=7;
+                MyProgressBar.isIs_0=false;
+                MyProgressBar.isIs_1=false;
+                MyProgressBar.isIs_2=true;
+                MyProgressBar.isIs_3=false;
+                MyProgressBar.txt.setVisibility(View.GONE);
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
-                MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
                 MyProgressBar.rotateLoading.setVisibility(View.GONE);
+                MyProgressBar.vy_loader.setVisibility(View.GONE);
 
-                MyProgressBar.vy_loader.setVisibility(View.VISIBLE);
+                MyProgressBar.myBallCradleLoading.setVisibility(View.VISIBLE);
+                MyProgressBar.myBallCradleLoading.start();
                 break;
             default:
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);

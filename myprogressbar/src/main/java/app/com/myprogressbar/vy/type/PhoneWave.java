@@ -41,24 +41,28 @@ public class PhoneWave extends LoaderView {
 
   @Override
   public void setUpAnimation() {
-    for (int i = 0; i < numberOfArc; i++) {
-      final int index = i;
+    try {
+      for (int i = 0; i < numberOfArc; i++) {
+        final int index = i;
 
-      ValueAnimator fadeAnimator = ValueAnimator.ofInt(126, 255, 126);
-      fadeAnimator.setRepeatCount(ValueAnimator.INFINITE);
-      fadeAnimator.setDuration(1000);
-      fadeAnimator.setStartDelay(i * 120);
-      fadeAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-        @Override
-        public void onAnimationUpdate(ValueAnimator animation) {
-          arcs[index].setAlpha((int)animation.getAnimatedValue());
-          if (invalidateListener != null) {
-            invalidateListener.reDraw();
+        ValueAnimator fadeAnimator = ValueAnimator.ofInt(126, 255, 126);
+        fadeAnimator.setRepeatCount(ValueAnimator.INFINITE);
+        fadeAnimator.setDuration(1000);
+        fadeAnimator.setStartDelay(i * 120);
+        fadeAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+          @Override
+          public void onAnimationUpdate(ValueAnimator animation) {
+            arcs[index].setAlpha((int) animation.getAnimatedValue());
+            if (invalidateListener != null) {
+              invalidateListener.reDraw();
+            }
           }
-        }
-      });
+        });
 
-      fadeAnimator.start();
+        fadeAnimator.start();
+      }
+    }catch (Exception e){
+      e.printStackTrace();
     }
   }
 
