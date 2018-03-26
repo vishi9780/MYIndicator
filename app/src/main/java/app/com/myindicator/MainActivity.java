@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -32,18 +34,28 @@ public class MainActivity extends MainActivity2{
         ll_parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
+                        true, false, null, counter);
+                counter++;
+              /*  final Timer timer2 = new Timer();
+                timer2.schedule(new TimerTask() {
+                    public void run() {
+                        myProgressBar.dismiss();
+                        timer2.cancel(); //this will cancel the timer of the system
+                    }
+                }, 5000); // the timer will count 5 seconds....*/
             }
         });
         ll_parent.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                counter = 0;
-                return false;
+
+                return true;
             }
         });
 
         scheduleTaskExecutor = Executors.newScheduledThreadPool(40);
+//        counter=35;
         scheduleTaskExecutor.scheduleAtFixedRate(new Runnable() {
             @Override
             public void run() {
@@ -52,16 +64,23 @@ public class MainActivity extends MainActivity2{
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-//                                if (counter==0){
-                                if (counter<=39)
-                                myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
-                                        true, false, null, counter);
-                                counter++;
-                                Log.e(TAG, "onClick:38>>>"+counter);
-                               /* }else {
+                               /* if (counter!=40) {
                                     myProgressBar = MyProgressBar.show(MainActivity.this, "Please Wait . . .",
-                                            true, false, null, 39);
-                                }*/
+                                            true, false, null, counter);
+                                    counter++;
+                                    Log.e(TAG, "<<<<onClick:38>>>" + counter);
+                                }else {*/
+                               try {
+                                   if (myProgressBar.isShowing()) {
+                                       myProgressBar.dismiss();
+                                       myProgressBar.hide();
+                                       Log.e(TAG, "<<<<onClick:68>>>" + counter + "<<<else>>>");
+                                   }
+                               }catch (Exception e){
+                                   Log.e("80","<<Main>>"+e);
+                               }
+
+
                     }
                 });
 
