@@ -105,6 +105,7 @@ public class TextBadgeItem extends BadgeItem<TextBadgeItem> {
         this.mText = text;
         if (isWeakReferenceValid()) {
             TextView textView = getTextView().get();
+
             if (!TextUtils.isEmpty(text)) {
                 textView.setText(text);
             }

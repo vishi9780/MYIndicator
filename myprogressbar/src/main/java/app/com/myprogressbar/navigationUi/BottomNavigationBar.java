@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.annotation.ColorRes;
-import android.support.annotation.IntDef;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
@@ -44,7 +42,7 @@ public class BottomNavigationBar extends FrameLayout {
     public static final int MODE_FIXED_NO_TITLE = 3;
     public static final int MODE_SHIFTING_NO_TITLE = 4;
 
-    @IntDef({MODE_DEFAULT, MODE_FIXED, MODE_SHIFTING, MODE_FIXED_NO_TITLE, MODE_SHIFTING_NO_TITLE})
+//    @IntDef({MODE_DEFAULT, MODE_FIXED, MODE_SHIFTING, MODE_FIXED_NO_TITLE, MODE_SHIFTING_NO_TITLE})
     @Retention(RetentionPolicy.SOURCE)
     @interface Mode {
     }
@@ -53,7 +51,7 @@ public class BottomNavigationBar extends FrameLayout {
     public static final int BACKGROUND_STYLE_STATIC = 1;
     public static final int BACKGROUND_STYLE_RIPPLE = 2;
 
-    @IntDef({BACKGROUND_STYLE_DEFAULT, BACKGROUND_STYLE_STATIC, BACKGROUND_STYLE_RIPPLE})
+//    @IntDef({BACKGROUND_STYLE_DEFAULT, BACKGROUND_STYLE_STATIC, BACKGROUND_STYLE_RIPPLE})
     @Retention(RetentionPolicy.SOURCE)
     @interface BackgroundStyle {
     }
@@ -63,7 +61,7 @@ public class BottomNavigationBar extends FrameLayout {
     private static final int FAB_BEHAVIOUR_DISAPPEAR = 1;
     private static final int FAB_BEHAVIOUR_TRANSLATE_OUT = 2;
 
-    @IntDef({FAB_BEHAVIOUR_TRANSLATE_AND_STICK, FAB_BEHAVIOUR_DISAPPEAR, FAB_BEHAVIOUR_TRANSLATE_OUT})
+//    @IntDef({FAB_BEHAVIOUR_TRANSLATE_AND_STICK, FAB_BEHAVIOUR_DISAPPEAR, FAB_BEHAVIOUR_TRANSLATE_OUT})
     @Retention(RetentionPolicy.SOURCE)
     @interface FabBehaviour {
     }
@@ -277,7 +275,7 @@ public class BottomNavigationBar extends FrameLayout {
      * @param activeColor res code for the default active color
      * @return this, to allow builder pattern
      */
-    public BottomNavigationBar setActiveColor(@ColorRes int activeColor) {
+    public BottomNavigationBar setActiveColor( int activeColor) {
         this.mActiveColor = ContextCompat.getColor(getContext(), activeColor);
         return this;
     }
@@ -295,7 +293,7 @@ public class BottomNavigationBar extends FrameLayout {
      * @param inActiveColor res code for the default in-active color
      * @return this, to allow builder pattern
      */
-    public BottomNavigationBar setInActiveColor(@ColorRes int inActiveColor) {
+    public BottomNavigationBar setInActiveColor( int inActiveColor) {
         this.mInActiveColor = ContextCompat.getColor(getContext(), inActiveColor);
         return this;
     }
@@ -313,7 +311,7 @@ public class BottomNavigationBar extends FrameLayout {
      * @param backgroundColor res code for the default background color
      * @return this, to allow builder pattern
      */
-    public BottomNavigationBar setBarBackgroundColor(@ColorRes int backgroundColor) {
+    public BottomNavigationBar setBarBackgroundColor( int backgroundColor) {
         this.mBackgroundColor = ContextCompat.getColor(getContext(), backgroundColor);
         return this;
     }

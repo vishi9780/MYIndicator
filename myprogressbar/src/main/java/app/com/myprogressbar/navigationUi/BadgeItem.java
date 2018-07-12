@@ -3,12 +3,15 @@ package app.com.myprogressbar.navigationUi;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPropertyAnimatorCompat;
 import android.support.v4.view.ViewPropertyAnimatorListener;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
+
+import static android.content.ContentValues.TAG;
 
 /***
  * Created by Vishal Yadav :- 173020181303HRS
@@ -249,6 +252,7 @@ abstract class BadgeItem<T extends BadgeItem<T>> {
         mIsHidden = true;
         if (isWeakReferenceValid()) {
             TextView textView = mTextViewRef.get();
+            Log.e(TAG, "hide: >>>"+textView.getText().toString() );
             if (animate) {
                 ViewPropertyAnimatorCompat animatorCompat = ViewCompat.animate(textView);
                 animatorCompat.cancel();

@@ -4,4 +4,17 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorGray">#ccc</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorTextPrimary">#FFFFFF</color>
+
+    <color name="tab_disable">#979797</color>
+    <color name="tab_enable">#FFFFFF</color>
+    <color name="tab_checked">#F3CD70</color>
+    <color name="tab_unchecked">#FFFFFF</color>
+
+
+    <color name="colorGreen">#80B52B</color>
+    <color name="colorGreenDark">#162303</color>
+    <color name="colorBlue">#1089ec</color>
+    <color name="colorYellow">#f5e100</color>
 </resources>
