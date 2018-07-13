@@ -23,7 +23,6 @@
         android:id="@+id/framelt"
         android:layout_width="match_parent"
         android:layout_height="100dp" />
-    <?xml version="1.0" encoding="utf-8"?>
     <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:drawme="http://schemas.android.com/apk/res-auto"
