@@ -27,7 +27,8 @@ public class OtpVerificationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_otp_verification);
         ed=(EditText)findViewById(R.id.otp);
         tv=(TextView) findViewById(R.id.verify_otp);
-        final PinView pinView = findViewById(R.id.secondPinView);
+        final PinView pinView = findViewById(R.id.firstPinView);
+
         pinView.setTextColor(
                 ResourcesCompat.getColor(getResources(), R.color.colorAccent, getTheme()));
         pinView.setTextColor(
