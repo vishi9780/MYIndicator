@@ -74,13 +74,15 @@
         app:itemWidth="50dp"
         -->
         <app.com.myprogressbar.customsplash.ParticleView
+            android:id="@+id/prVw_particle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_dark"
             pv:pv_background_color="#2E2E2E"
             pv:pv_host_text="github"
-            pv:pv_host_text_size="14sp"
+            pv:pv_host_text_size="50sp"
             pv:pv_particle_text=".com"
-            pv:pv_particle_text_size="14sp"
+            pv:pv_particle_text_size="24sp"
             pv:pv_text_color="#FFF"
             pv:pv_text_anim_time="3000"
             pv:pv_spread_anim_time="2000"
