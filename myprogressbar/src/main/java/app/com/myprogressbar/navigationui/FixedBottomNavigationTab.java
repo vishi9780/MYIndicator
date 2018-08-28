@@ -1,4 +1,4 @@
-package app.com.myprogressbar.navigationUi;
+package app.com.myprogressbar.navigationui;
 
 import android.annotation.TargetApi;
 import android.content.Context;

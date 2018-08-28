@@ -1,4 +1,4 @@
-package app.com.myprogressbar.navigationUi;
+package app.com.myprogressbar.navigationui;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import app.com.myprogressbar.navigationUi.utils.Utils;
+import app.com.myprogressbar.navigationui.utils.Utils;
 
 /***
  * Created by Vishal Yadav :- 173020181303HRS

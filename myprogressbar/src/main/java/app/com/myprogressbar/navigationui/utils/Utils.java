@@ -1,4 +1,4 @@
-package app.com.myprogressbar.navigationUi.utils;
+package app.com.myprogressbar.navigationui.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;

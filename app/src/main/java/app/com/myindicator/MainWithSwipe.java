@@ -15,10 +15,8 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -26,7 +24,6 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.concurrent.ScheduledExecutorService;
@@ -34,10 +31,10 @@ import java.util.concurrent.ScheduledExecutorService;
 import app.com.myindicator.adapter.ViewPagerAdapter;
 import app.com.myindicator.fragments.F1;
 import app.com.myindicator.fragments.F2;
-import app.com.myprogressbar.navigationUi.BottomNavigationBar;
-import app.com.myprogressbar.navigationUi.BottomNavigationItem;
-import app.com.myprogressbar.navigationUi.ShapeBadgeItem;
-import app.com.myprogressbar.navigationUi.TextBadgeItem;
+import app.com.myprogressbar.navigationui.BottomNavigationBar;
+import app.com.myprogressbar.navigationui.BottomNavigationItem;
+import app.com.myprogressbar.navigationui.ShapeBadgeItem;
+import app.com.myprogressbar.navigationui.TextBadgeItem;
 import app.com.myprogressbar.customization.MyProgressBar;
 
 /***

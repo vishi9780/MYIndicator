@@ -8,7 +8,7 @@
 
 
 
-        <app.com.myprogressbar.myBall.MyBall
+        <app.com.myprogressbar.myball.MyBall
             android:id="@+id/ball_one"
             android:layout_width="@dimen/_15dp"
             android:layout_height="@dimen/_15dp"
@@ -16,28 +16,28 @@
             app:cradle_ball_color="@android:color/white" 
             android:layout_gravity="center"/>
 
-        <app.com.myprogressbar.myBall.MyBall
+        <app.com.myprogressbar.myball.MyBall
             android:id="@+id/ball_two"
             android:layout_width="@dimen/_15dp"
             android:layout_height="@dimen/_15dp"
             app:cradle_ball_color="@android:color/white"
             android:layout_gravity="center"/>
 
-        <app.com.myprogressbar.myBall.MyBall
+        <app.com.myprogressbar.myball.MyBall
             android:id="@+id/ball_three"
             android:layout_width="@dimen/_15dp"
             android:layout_height="@dimen/_15dp"
             app:cradle_ball_color="@android:color/white"
             android:layout_gravity="center"/>
 
-        <app.com.myprogressbar.myBall.MyBall
+        <app.com.myprogressbar.myball.MyBall
             android:id="@+id/ball_four"
             android:layout_width="@dimen/_15dp"
             android:layout_height="@dimen/_15dp"
             app:cradle_ball_color="@android:color/white"
             android:layout_gravity="center"/>
 
-        <app.com.myprogressbar.myBall.MyBall
+        <app.com.myprogressbar.myball.MyBall
             android:id="@+id/ball_five"
             android:layout_width="@dimen/_15dp"
             android:layout_height="@dimen/_15dp"

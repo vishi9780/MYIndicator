@@ -49,7 +49,7 @@
         android:paddingRight="0dp"
         app:tabBackground="@drawable/tab_bg">
     </android.support.design.widget.TabLayout>
-    <app.com.myprogressbar.navigationUi.BottomNavigationBar
+    <app.com.myprogressbar.navigationui.BottomNavigationBar
         android:id="@+id/bottom_navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

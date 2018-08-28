@@ -1,4 +1,4 @@
-package app.com.myprogressbar.navigationUi.behaviour;
+package app.com.myprogressbar.navigationui.behaviour;
 
 
 import android.support.design.widget.CoordinatorLayout;
@@ -12,7 +12,7 @@ import android.view.animation.Interpolator;
 import java.lang.ref.WeakReference;
 import java.util.List;
 
-import app.com.myprogressbar.navigationUi.BottomNavigationBar;
+import app.com.myprogressbar.navigationui.BottomNavigationBar;
 
 /***
  * Created by Vishal Yadav :- 173020181303HRS

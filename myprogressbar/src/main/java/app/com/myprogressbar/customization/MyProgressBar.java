@@ -14,7 +14,7 @@ import app.com.myprogressbar.R;
 import app.com.myprogressbar.vy.VYLoader;
 import app.com.myprogressbar.customization.spinnerloader.SpinnerLoading;
 import app.com.myprogressbar.multiIndicators.IndicatorView;
-import app.com.myprogressbar.myBall.MyBallCradleLoading;
+import app.com.myprogressbar.myball.MyBallCradleLoading;
 import app.com.myprogressbar.rotate.RotateLoading;
 
 import static app.com.myprogressbar.customization.SettingIndicatorHere.setIndicatorHere;

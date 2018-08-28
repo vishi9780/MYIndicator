@@ -1,4 +1,4 @@
-package app.com.myprogressbar.myBall;
+package app.com.myprogressbar.myball;
 
 import android.content.Context;
 import android.content.res.TypedArray;

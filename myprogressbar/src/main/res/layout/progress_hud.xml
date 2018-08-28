@@ -23,7 +23,7 @@
         android:layout_gravity="center"
         android:visibility="gone"/>
 
-    <app.com.myprogressbar.myBall.MyBallCradleLoading
+    <app.com.myprogressbar.myball.MyBallCradleLoading
         android:id="@+id/myBallCradleLoading"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

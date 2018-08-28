@@ -1,4 +1,4 @@
-package app.com.myprogressbar.navigationUi;
+package app.com.myprogressbar.navigationui;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -26,9 +26,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 
 import app.com.myprogressbar.R;
-import app.com.myprogressbar.navigationUi.behaviour.BottomNavBarFabBehaviour;
-import app.com.myprogressbar.navigationUi.behaviour.BottomVerticalScrollBehavior;
-import app.com.myprogressbar.navigationUi.utils.Utils;
+import app.com.myprogressbar.navigationui.behaviour.BottomNavBarFabBehaviour;
+import app.com.myprogressbar.navigationui.behaviour.BottomVerticalScrollBehavior;
+import app.com.myprogressbar.navigationui.utils.Utils;
 
 /***
  * Created by Vishal Yadav :- 173020181303HRS

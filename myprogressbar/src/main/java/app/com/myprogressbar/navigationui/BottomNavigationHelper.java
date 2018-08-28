@@ -1,4 +1,4 @@
-package app.com.myprogressbar.navigationUi;
+package app.com.myprogressbar.navigationui;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 
 import app.com.myprogressbar.R;
-import app.com.myprogressbar.navigationUi.utils.Utils;
+import app.com.myprogressbar.navigationui.utils.Utils;
 
 
 /***

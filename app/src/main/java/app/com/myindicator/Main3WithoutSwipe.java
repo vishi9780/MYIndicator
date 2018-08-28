@@ -1,13 +1,11 @@
 package app.com.myindicator;
 
-import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
@@ -19,10 +17,10 @@ import app.com.myindicator.adapter.ViewPagerAdapter;
 import app.com.myindicator.fragments.F1;
 import app.com.myindicator.fragments.F2;
 import app.com.myprogressbar.customization.MyProgressBar;
-import app.com.myprogressbar.navigationUi.BottomNavigationBar;
-import app.com.myprogressbar.navigationUi.BottomNavigationItem;
-import app.com.myprogressbar.navigationUi.ShapeBadgeItem;
-import app.com.myprogressbar.navigationUi.TextBadgeItem;
+import app.com.myprogressbar.navigationui.BottomNavigationBar;
+import app.com.myprogressbar.navigationui.BottomNavigationItem;
+import app.com.myprogressbar.navigationui.ShapeBadgeItem;
+import app.com.myprogressbar.navigationui.TextBadgeItem;
 
 public class Main3WithoutSwipe extends AppCompatActivity  implements BottomNavigationBar.OnTabSelectedListener {
     public static final String TAG=MainWithSwipe.class.getSimpleName();

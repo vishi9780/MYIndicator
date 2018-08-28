@@ -1,4 +1,4 @@
-package app.com.myprogressbar.navigationUi;
+package app.com.myprogressbar.navigationui;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -11,7 +11,7 @@ import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 
-import app.com.myprogressbar.navigationUi.utils.Utils;
+import app.com.myprogressbar.navigationui.utils.Utils;
 
 
 /***

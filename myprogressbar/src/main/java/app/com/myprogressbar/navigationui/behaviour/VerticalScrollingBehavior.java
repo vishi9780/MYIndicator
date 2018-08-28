@@ -1,4 +1,4 @@
-package app.com.myprogressbar.navigationUi.behaviour;
+package app.com.myprogressbar.navigationui.behaviour;
 
 
 import android.content.Context;

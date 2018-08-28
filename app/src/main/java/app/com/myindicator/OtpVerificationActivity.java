@@ -19,6 +19,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import app.com.myprogressbar.customsplash.ParticleView;
+import app.com.myprogressbar.justification_txt_edit_txt.JustifiedTextView;
 import app.com.myprogressbar.otpview.PinView;
 import app.com.myprogressbar.otpview.otpCatcher.OnSmsCatchListener;
 import app.com.myprogressbar.otpview.otpCatcher.SmsVerifyCatcher;
@@ -27,6 +28,7 @@ import app.com.myprogressbar.otpview.otpCatcher.SmsVerifyCatcher;
 public class OtpVerificationActivity extends AppCompatActivity {
     private EditText ed;
     private TextView tv;
+    JustifiedTextView tv_txt;
     private String otp_generated,contactNo,id1;
     private ParticleView prVw_particle;
     private SmsVerifyCatcher smsVerifyCatcher;
@@ -37,6 +39,8 @@ public class OtpVerificationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_otp_verification);
         ed=(EditText)findViewById(R.id.otp);
         tv=(TextView) findViewById(R.id.verify_otp);
+        tv_txt=(JustifiedTextView) findViewById(R.id.tv_txt);
+        tv_txt.setText("Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.");
         final PinView pinView = findViewById(R.id.firstPinView);
         final ParticleView prVw_particle = findViewById(R.id.prVw_particle);
         prVw_particle.startAnim();
@@ -73,6 +77,7 @@ public class OtpVerificationActivity extends AppCompatActivity {
         });
 
         //init SmsVerifyCatcher
+
         smsVerifyCatcher = new SmsVerifyCatcher(this, new OnSmsCatchListener<String>() {
             @Override
             public void onSmsCatch(String message) {
