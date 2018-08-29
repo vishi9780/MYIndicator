@@ -12,12 +12,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import app.com.myindicator.expandabletxt.NormalModeActivity;
+import app.com.myindicator.expandabletxt.RecyclerViewModeActivity;
 import app.com.myprogressbar.customsplash.ParticleView;
 import app.com.myprogressbar.justification_txt_edit_txt.JustifiedTextView;
 import app.com.myprogressbar.otpview.PinView;
@@ -91,7 +94,18 @@ public class OtpVerificationActivity extends AppCompatActivity {
         //set phone number filter if needed
         smsVerifyCatcher.setPhoneNumberFilter("777");
         //smsVerifyCatcher.setFilter("regexp");
-
+        findViewById(R.id.btn_normal_mode).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OtpVerificationActivity.this,NormalModeActivity.class));
+            }
+        });
+        findViewById(R.id.btn_recycler_view_mode).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OtpVerificationActivity.this,RecyclerViewModeActivity.class));
+            }
+        });
     }
     /**
      * Parse verification code

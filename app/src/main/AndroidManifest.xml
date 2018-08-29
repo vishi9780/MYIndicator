@@ -31,6 +31,8 @@
         <activity android:name=".MainWithSwipe" />
         <activity android:name=".ProressBar" />
         <activity android:name=".Main3WithoutSwipe"></activity>
+        <activity android:name=".expandabletxt.RecyclerViewModeActivity"></activity>
+        <activity android:name=".expandabletxt.NormalModeActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app.com.myprogressbar.expandable_txt.TextViewExpandableAnimation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tv_expand"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:tvea_expandBitmap="@drawable/icon_green_arrow_down"
+    app:tvea_expandLines="3"
+    app:tvea_shrinkBitmap="@drawable/icon_green_arrow_up"
+    app:tvea_textContentColor="@color/color_gray_light_content_text"
+    app:tvea_textContentSize="14sp"
+    app:tvea_textExpand="@string/expand"
+    app:tvea_textShrink="@string/collapse"
+    app:tvea_textStateColor="@color/colorPrimary">
+
+</app.com.myprogressbar.expandable_txt.TextViewExpandableAnimation>

@@ -95,6 +95,16 @@
             android:id="@+id/tv_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_normal_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="normal_mode" />
 
+        <Button
+            android:id="@+id/btn_recycler_view_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="recycler_view_mode" />
 </LinearLayout>
 </ScrollView>
