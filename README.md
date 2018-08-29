@@ -35,6 +35,6 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  }</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</br>
 
-![Alt Text](https://github.com/vishi9780/MYIndicator/blob/master/screenshot/screeeeeeeeeeeeeee.gif)</br>
+/*![Alt Text](https://github.com/vishi9780/MYIndicator/blob/master/screenshot/screeeeeeeeeeeeeee.gif)</br>*/
 <img src="https://github.com/vishi9780/MYIndicator/blob/master/screenshot/screeeeeeeeeeeeeee.gif" width="148"></br>
 									
