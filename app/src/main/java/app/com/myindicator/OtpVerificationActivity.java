@@ -26,6 +26,7 @@ import app.com.myprogressbar.justification_txt_edit_txt.JustifiedTextView;
 import app.com.myprogressbar.otpview.PinView;
 import app.com.myprogressbar.otpview.otpCatcher.OnSmsCatchListener;
 import app.com.myprogressbar.otpview.otpCatcher.SmsVerifyCatcher;
+import app.com.myprogressbar.toastcustomization.YummyToast;
 
 
 public class OtpVerificationActivity extends AppCompatActivity {
@@ -106,6 +107,7 @@ public class OtpVerificationActivity extends AppCompatActivity {
                 startActivity(new Intent(OtpVerificationActivity.this,RecyclerViewModeActivity.class));
             }
         });
+        YummyToast.makeText(OtpVerificationActivity.this,"",YummyToast.LENGTH_LONG,YummyToast.CONFUSING);
     }
     /**
      * Parse verification code
