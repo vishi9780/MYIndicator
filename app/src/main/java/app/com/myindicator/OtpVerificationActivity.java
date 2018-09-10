@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.content.LocalBroadcastManager;
@@ -14,6 +16,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.regex.Matcher;
@@ -23,6 +26,8 @@ import app.com.myindicator.expandabletxt.NormalModeActivity;
 import app.com.myindicator.expandabletxt.RecyclerViewModeActivity;
 import app.com.myprogressbar.customsplash.ParticleView;
 import app.com.myprogressbar.justification_txt_edit_txt.JustifiedTextView;
+import app.com.myprogressbar.mygradient.GradientLinearLayout;
+import app.com.myprogressbar.mygradient.GradientRelativeLayout;
 import app.com.myprogressbar.otpview.PinView;
 import app.com.myprogressbar.otpview.otpCatcher.OnSmsCatchListener;
 import app.com.myprogressbar.otpview.otpCatcher.SmsVerifyCatcher;
@@ -36,6 +41,7 @@ public class OtpVerificationActivity extends AppCompatActivity {
     private String otp_generated,contactNo,id1;
     private ParticleView prVw_particle;
     private SmsVerifyCatcher smsVerifyCatcher;
+    GradientLinearLayout activity_otp_verifications;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +114,33 @@ public class OtpVerificationActivity extends AppCompatActivity {
             }
         });
         YummyToast.makeText(OtpVerificationActivity.this,"",YummyToast.LENGTH_LONG,YummyToast.CONFUSING);
+        activity_otp_verifications=(GradientLinearLayout)findViewById(R.id.activity_otp_verification);
+        generateBackgroundForSection(activity_otp_verifications, 1);
+
+    }
+    private void generateBackgroundForSection(final GradientLinearLayout layout, final int section) {
+        switch (section) {
+            case 1:
+                layout.setGradientBackgroundConfig(
+                        Color.rgb(123, 31, 162),
+                        Color.rgb(0, 150, 136),
+                        GradientDrawable.Orientation.BL_TR);
+                break;
+            case 2:
+                layout.setEndColor(Color.rgb(123,31,162));
+                break;
+            case 3:
+                layout
+                        .setEndColor(Color.rgb(104,159,56))
+                        .setOrientation(GradientDrawable.Orientation.LEFT_RIGHT);
+                break;
+            case 4:
+                layout
+                        .setStartColor(Color.rgb(255,87,34))
+                        .setEndColor(Color.rgb(255,193,7))
+                        .setOrientation(GradientDrawable.Orientation.TR_BL);
+                break;
+        }
     }
     /**
      * Parse verification code
@@ -166,4 +199,5 @@ public class OtpVerificationActivity extends AppCompatActivity {
             }
         }
     };
+
 }
