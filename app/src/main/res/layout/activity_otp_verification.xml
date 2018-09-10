@@ -60,8 +60,7 @@
             android:layout_gravity="center"
             android:cursorVisible="false"
             android:gravity="center"
-            android:hint="Hint."
-            android:inputType="text"
+            android:inputType="number"
             android:padding="@dimen/common_padding"
             android:textColor="@color/text_colors"
             android:textSize="18sp"
@@ -80,7 +79,7 @@
         <app.com.myprogressbar.customsplash.ParticleView
             android:id="@+id/prVw_particle"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_150dp"
+            android:layout_height="@dimen/_100dp"
             android:background="@android:color/holo_red_dark"
             pv:pv_background_color="#2E2E2E"
             pv:pv_host_text="github"

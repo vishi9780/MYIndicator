@@ -71,10 +71,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.button:
-                startActivity(new Intent(this,MainWithSwipe.class));
                 break;
                 case R.id.button2:
-                startActivity(new Intent(this,Main3WithoutSwipe.class));
                 break;
             case R.id.button3:
                 startActivity(new Intent(this,ProressBar.class));
