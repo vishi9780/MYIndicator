@@ -34,6 +34,11 @@
                 android:layout_margin="25dp"
                 android:hint="OTP Here"
                 />
+            <app.com.myprogressbar.otpview.VerifyCodeView
+                android:id="@+id/verfiy_cview"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_50dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -52,30 +57,7 @@
 
 
 
-        <app.com.myprogressbar.otpview.PinView
-            android:id="@+id/firstPinView"
-            style="@style/PinWidget.PinView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:cursorVisible="false"
-            android:gravity="center"
-            android:inputType="number"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/text_colors"
-            android:textSize="18sp"
-            app:cursorColor="@color/line_selected"
-            app:cursorWidth="2dp"
-            app:lineColor="@color/line_selected"
-            app:lineWidth="2dp"
-            app:viewType="rectangle" />
-        <!--
-        app:itemHeight="50dp"
-        app:itemRadius="1dp"
-        app:itemCount="4"
-        app:itemSpacing="10dp"
-        app:itemWidth="50dp"
-        -->
+
         <app.com.myprogressbar.customsplash.ParticleView
             android:id="@+id/prVw_particle"
             android:layout_width="match_parent"
