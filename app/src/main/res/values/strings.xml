@@ -1,10 +1,5 @@
 <resources>
     <string name="app_name">MYIndicator</string>
-    <string name="music">Music</string>
-    <string name="backup">Backup</string>
-    <string name="friends">Friends</string>
-    <string name="favor">Favor</string>
-    <string name="visibility">Visibility</string>
     <string name="tips">This is a custom TextView that can be expanded with a smooth transition animation,you can set the number of lines to expand,change its icon or text and so on\n</string>
     <string name="tips_short">Hello there,i am a short text for test</string>
 </resources>

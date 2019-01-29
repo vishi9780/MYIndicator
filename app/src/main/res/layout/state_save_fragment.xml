@@ -48,13 +48,11 @@
                 android:text="Normal"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/transparent_pressed"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Pressed"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/transparent_disabled"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Disabled"/>
@@ -70,7 +68,6 @@
                 drawme:dm_backColor="@color/colorAccent"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/colored_pressed1"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:stateListAnimator="@null"
@@ -79,14 +76,12 @@
                 drawme:dm_backColor="@color/colorAccent"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/colored_pressed2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Pressed"
                 drawme:dm_backColor="@color/colorAccent"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/colored_disabled"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Disabled"
@@ -104,7 +99,6 @@
                 android:text="Normal"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/rounded_pressed"
                 style="@style/RoundedButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -113,7 +107,6 @@
                 android:text="Pressed"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/rounded_disabled"
                 style="@style/RoundedButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -160,7 +153,6 @@
                 drawme:dm_textColor="@android:color/white"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/ctrl_pressed1"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
@@ -172,7 +164,6 @@
                 drawme:dm_textColor="@android:color/white"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/ctrl_pressed2"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Dim background color"
@@ -276,7 +267,6 @@
                 drawme:dm_textColor="@android:color/white"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/mask_def"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="8dp"
@@ -286,7 +276,6 @@
                 drawme:dm_textColor="@android:color/white"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/mask_dark"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="8dp"
@@ -297,7 +286,6 @@
                 drawme:dm_textColor="@android:color/white"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/mask_light"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="8dp"
@@ -342,7 +330,6 @@
                 drawme:dm_textColor="@android:color/white"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/ada1"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="8dp"
@@ -362,7 +349,6 @@
                 drawme:dm_textColor="@android:color/white"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/ada2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="8dp"
@@ -372,7 +358,6 @@
                 drawme:dm_textColor="@android:color/white"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/ada3"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="8dp"
@@ -383,7 +368,6 @@
                 drawme:dm_textColor="@android:color/white"/>
 
             <app.com.myprogressbar.mydrawbutton.DrawMeButton
-                android:id="@+id/ada4"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="8dp"

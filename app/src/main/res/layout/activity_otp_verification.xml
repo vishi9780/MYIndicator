@@ -23,7 +23,6 @@
                 android:text="OTP Confirmation"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:id="@+id/dialogTitle"
                 android:layout_margin="5dp"
                 android:layout_gravity="center"
                 />

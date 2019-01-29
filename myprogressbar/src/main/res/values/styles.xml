@@ -26,21 +26,6 @@
         <item name="indicatorName">BallPulseIndicator</item>
     </style>
 
-    <style name="IndicatorView.Large">
-        <item name="minWidth">76dip</item>
-        <item name="maxWidth">76dip</item>
-        <item name="minHeight">76dip</item>
-        <item name="maxHeight">76dip</item>
-        <item name="indicatorName">BallPulseIndicator</item>
-    </style>
-
-    <style name="IndicatorView.Small">
-        <item name="minWidth">24dip</item>
-        <item name="maxWidth">24dip</item>
-        <item name="minHeight">24dip</item>
-        <item name="maxHeight">24dip</item>
-        <item name="indicatorName">BallPulseIndicator</item>
-    </style>
     <declare-styleable name="IndicatorView">
         <attr name="minWidth" format="dimension" />
         <attr name="maxWidth" format="dimension"/>
@@ -50,23 +35,4 @@
         <attr name="indicatorColor" format="color"/>
     </declare-styleable>
 
-    <style name="BadgeText" parent="TextAppearance.AppCompat.Body2">
-        <item name="android:textSize">@dimen/badge_text_size</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:layout_marginTop">@dimen/badge_top_margin</item>
-        <item name="android:paddingRight">@dimen/badge_width_padding</item>
-        <item name="android:paddingLeft">@dimen/badge_width_padding</item>
-        <item name="android:paddingBottom">@dimen/badge_height_padding</item>
-        <item name="android:paddingTop">@dimen/badge_height_padding</item>
-        <item name="android:visibility">gone</item>
-    </style>
-
-    <style name="PinWidget" />
-
-    <style name="PinWidget.PinView" parent="Widget.AppCompat.EditText">
-        <item name="android:background">@null</item>
-        <item name="android:minHeight">0dp</item>
-        <item name="android:maxLines">1</item>
-    </style>
 </resources>

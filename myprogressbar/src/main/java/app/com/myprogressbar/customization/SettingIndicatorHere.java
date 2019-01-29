@@ -6,29 +6,29 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 
 
-
 /***
  * Created by Vishal Yadav :- 173020181303HRS
  */
 
 public class SettingIndicatorHere {
     //in loader generator class 1-7 values are there
-    public static int myStaticValue=0;
+    public static int myStaticValue = 0;
+
     public static void setIndicatorHere(Context context, CharSequence message, int myLoaderValue, AnimationDrawable spinner) {
-            getSdk(context);
+        getSdk(context);
 
-            if (message.length()>0&&myLoaderValue==1){
-                MyProgressBar.txt.setVisibility(View.VISIBLE);
-            } else {
-                MyProgressBar.txt.setVisibility(View.GONE);
-            }
+        if (message.length() > 0 && myLoaderValue == 1) {
+            MyProgressBar.txt.setVisibility(View.VISIBLE);
+        } else {
+            MyProgressBar.txt.setVisibility(View.GONE);
+        }
 
-        switch (myLoaderValue){
+        switch (myLoaderValue) {
             case 0:
-                MyProgressBar.isIs_0=true;
-                MyProgressBar.isIs_1=false;
-                MyProgressBar.isIs_2=false;
-                MyProgressBar.isIs_3=false;
+                MyProgressBar.isIs_0 = true;
+                MyProgressBar.isIs_1 = false;
+                MyProgressBar.isIs_2 = false;
+                MyProgressBar.isIs_3 = false;
                 MyProgressBar.spinner_loading.setPaintMode(6);
                 MyProgressBar.spinner_loading.setCircleRadius(10);
                 MyProgressBar.spinner_loading.setItemCount(7);
@@ -38,10 +38,10 @@ public class SettingIndicatorHere {
 
                 break;
             case 1:
-                MyProgressBar.isIs_0=false;
-                MyProgressBar.isIs_1=true;
-                MyProgressBar.isIs_2=false;
-                MyProgressBar.isIs_3=false;
+                MyProgressBar.isIs_0 = false;
+                MyProgressBar.isIs_1 = true;
+                MyProgressBar.isIs_2 = false;
+                MyProgressBar.isIs_3 = false;
                 MyProgressBar.imageView.setVisibility(View.VISIBLE);
                 MyProgressBar.vy_loader.setVisibility(View.GONE);
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
@@ -51,7 +51,7 @@ public class SettingIndicatorHere {
                 spinner.start();
                 break;
             case 2:
-                myStaticValue=7;
+                myStaticValue = 7;
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
                 MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
@@ -62,10 +62,10 @@ public class SettingIndicatorHere {
 
                 break;
             case 3:
-                MyProgressBar.isIs_0=false;
-                MyProgressBar.isIs_1=false;
-                MyProgressBar.isIs_2=false;
-                MyProgressBar.isIs_3=true;
+                MyProgressBar.isIs_0 = false;
+                MyProgressBar.isIs_1 = false;
+                MyProgressBar.isIs_2 = false;
+                MyProgressBar.isIs_3 = true;
                 MyProgressBar.txt.setVisibility(View.GONE);
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
@@ -74,7 +74,7 @@ public class SettingIndicatorHere {
 
                 MyProgressBar.rotateLoading.setVisibility(View.VISIBLE);
                 MyProgressBar.rotateLoading.start();
-             break;
+                break;
             case 4:
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
@@ -155,25 +155,25 @@ public class SettingIndicatorHere {
                 MyProgressBar.myIndicator_vw.setVisibility(View.VISIBLE);
                 MyProgressBar.myIndicator_vw.setmyIndicator(11);
                 break;
-                case 12:
-                    MyProgressBar.spinner_loading.setVisibility(View.GONE);
-                    MyProgressBar.imageView.setVisibility(View.GONE);
-                    MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
-                    MyProgressBar.rotateLoading.setVisibility(View.GONE);
-                    MyProgressBar.vy_loader.setVisibility(View.GONE);
+            case 12:
+                MyProgressBar.spinner_loading.setVisibility(View.GONE);
+                MyProgressBar.imageView.setVisibility(View.GONE);
+                MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
+                MyProgressBar.rotateLoading.setVisibility(View.GONE);
+                MyProgressBar.vy_loader.setVisibility(View.GONE);
 
-                    MyProgressBar.myIndicator_vw.setVisibility(View.VISIBLE);
-                    MyProgressBar.myIndicator_vw.setmyIndicator(12);
+                MyProgressBar.myIndicator_vw.setVisibility(View.VISIBLE);
+                MyProgressBar.myIndicator_vw.setmyIndicator(12);
                 break;
-                case 13:
-                    MyProgressBar.spinner_loading.setVisibility(View.GONE);
-                    MyProgressBar.imageView.setVisibility(View.GONE);
-                    MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
-                    MyProgressBar.rotateLoading.setVisibility(View.GONE);
-                    MyProgressBar.vy_loader.setVisibility(View.GONE);
+            case 13:
+                MyProgressBar.spinner_loading.setVisibility(View.GONE);
+                MyProgressBar.imageView.setVisibility(View.GONE);
+                MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
+                MyProgressBar.rotateLoading.setVisibility(View.GONE);
+                MyProgressBar.vy_loader.setVisibility(View.GONE);
 
-                    MyProgressBar.myIndicator_vw.setVisibility(View.VISIBLE);
-                    MyProgressBar.myIndicator_vw.setmyIndicator(13);
+                MyProgressBar.myIndicator_vw.setVisibility(View.VISIBLE);
+                MyProgressBar.myIndicator_vw.setmyIndicator(13);
                 break;
             case 14:
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
@@ -355,7 +355,7 @@ public class SettingIndicatorHere {
                 MyProgressBar.myIndicator_vw.setVisibility(View.VISIBLE);
                 MyProgressBar.myIndicator_vw.setmyIndicator(31);
                 break;
-                case 32:
+            case 32:
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
                 MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
@@ -366,7 +366,7 @@ public class SettingIndicatorHere {
                 MyProgressBar.myIndicator_vw.setmyIndicator(32);
                 break;
             case 33:
-                myStaticValue=1;
+                myStaticValue = 1;
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
                 MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
@@ -375,7 +375,7 @@ public class SettingIndicatorHere {
                 MyProgressBar.vy_loader.setVisibility(View.VISIBLE);
                 break;
             case 34:
-                myStaticValue=2;
+                myStaticValue = 2;
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
                 MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
@@ -384,7 +384,7 @@ public class SettingIndicatorHere {
                 MyProgressBar.vy_loader.setVisibility(View.VISIBLE);
                 break;
             case 35:
-                myStaticValue=3;
+                myStaticValue = 3;
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
                 MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
@@ -393,7 +393,7 @@ public class SettingIndicatorHere {
                 MyProgressBar.vy_loader.setVisibility(View.VISIBLE);
                 break;
             case 36:
-                myStaticValue=4;
+                myStaticValue = 4;
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
                 MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
@@ -402,7 +402,7 @@ public class SettingIndicatorHere {
                 MyProgressBar.vy_loader.setVisibility(View.VISIBLE);
                 break;
             case 37:
-                myStaticValue=5;
+                myStaticValue = 5;
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
                 MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
@@ -411,7 +411,7 @@ public class SettingIndicatorHere {
                 MyProgressBar.vy_loader.setVisibility(View.VISIBLE);
                 break;
             case 38:
-                myStaticValue=6;
+                myStaticValue = 6;
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
                 MyProgressBar.myBallCradleLoading.setVisibility(View.GONE);
@@ -420,10 +420,10 @@ public class SettingIndicatorHere {
                 MyProgressBar.vy_loader.setVisibility(View.VISIBLE);
                 break;
             case 39:
-                MyProgressBar.isIs_0=false;
-                MyProgressBar.isIs_1=false;
-                MyProgressBar.isIs_2=true;
-                MyProgressBar.isIs_3=false;
+                MyProgressBar.isIs_0 = false;
+                MyProgressBar.isIs_1 = false;
+                MyProgressBar.isIs_2 = true;
+                MyProgressBar.isIs_3 = false;
                 MyProgressBar.txt.setVisibility(View.GONE);
                 MyProgressBar.spinner_loading.setVisibility(View.GONE);
                 MyProgressBar.imageView.setVisibility(View.GONE);
@@ -446,8 +446,8 @@ public class SettingIndicatorHere {
 
     public static int getSdk(Context context) {
         final int sdk = android.os.Build.VERSION.SDK_INT;
-        if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-            MyProgressBar.ll_parent.setBackgroundDrawable(ContextCompat.getDrawable(context, android.R.color.transparent) );
+        if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            MyProgressBar.ll_parent.setBackgroundDrawable(ContextCompat.getDrawable(context, android.R.color.transparent));
         } else {
             MyProgressBar.ll_parent.setBackground(ContextCompat.getDrawable(context, android.R.color.transparent));
         }
