@@ -12,18 +12,18 @@ public class GradientFrameLayout extends FrameLayout {
     private final GradientBackground gradientBackground;
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public GradientFrameLayout( final Context context,
-                                final AttributeSet attrs,
-                                final int defStyleAttr,
-                                final int defStyleRes) {
+    public GradientFrameLayout(final Context context,
+                               final AttributeSet attrs,
+                               final int defStyleAttr,
+                               final int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         this.gradientBackground = new GradientBackground(context, attrs);
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public GradientFrameLayout( final Context context,
-                                final AttributeSet attrs,
-                                final int defStyleAttr) {
+    public GradientFrameLayout(final Context context,
+                               final AttributeSet attrs,
+                               final int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.gradientBackground = new GradientBackground(context, attrs);
     }
@@ -36,8 +36,9 @@ public class GradientFrameLayout extends FrameLayout {
 
     /**
      * <p>Configure the gradient background for this layout.</p>
-     * @param startColor The start color for the gradient
-     * @param endColor The end color for the gradient
+     *
+     * @param startColor  The start color for the gradient
+     * @param endColor    The end color for the gradient
      * @param orientation The orientation for the gradient {@link  GradientDrawable.Orientation  GradientDrawable.Orientation}
      */
     public void setGradientBackgroundConfig(final int startColor, final int endColor, final GradientDrawable.Orientation orientation) {
@@ -50,6 +51,7 @@ public class GradientFrameLayout extends FrameLayout {
 
     /**
      * <p>Configure the start color for the gradient background for this layout.</p>
+     *
      * @param startColor The start color for the gradient
      */
     public GradientFrameLayout setStartColor(final int startColor) {
@@ -59,6 +61,7 @@ public class GradientFrameLayout extends FrameLayout {
 
     /**
      * <p>Configure the end color for the gradient background for this layout.</p>
+     *
      * @param endColor The end color for the gradient
      */
     public GradientFrameLayout setEndColor(final int endColor) {
@@ -68,6 +71,7 @@ public class GradientFrameLayout extends FrameLayout {
 
     /**
      * <p>Configure the top left corner radius</p>
+     *
      * @param radius The radius to set
      */
     public GradientFrameLayout setRadiusCornerTopLeft(final float radius) {
@@ -77,6 +81,7 @@ public class GradientFrameLayout extends FrameLayout {
 
     /**
      * <p>Configure the top right corner radius</p>
+     *
      * @param radius The radius to set
      */
     public GradientFrameLayout setRadiusCornerTopRight(final float radius) {
@@ -86,6 +91,7 @@ public class GradientFrameLayout extends FrameLayout {
 
     /**
      * <p>Configure the top left corner radius</p>
+     *
      * @param radius The radius to set
      */
     public GradientFrameLayout setRadiusCornerBottomRight(final float radius) {
@@ -95,6 +101,7 @@ public class GradientFrameLayout extends FrameLayout {
 
     /**
      * <p>Configure the top left corner radius</p>
+     *
      * @param radius The radius to set
      */
     public GradientFrameLayout setRadiusCornerBottomLeft(final float radius) {
@@ -104,6 +111,7 @@ public class GradientFrameLayout extends FrameLayout {
 
     /**
      * <p>Configure the orientation for the gradient background for this layout.</p>
+     *
      * @param orientation The orientation for the gradient {@link  GradientDrawable.Orientation  GradientDrawable.Orientation}
      */
     public GradientFrameLayout setOrientation(final GradientDrawable.Orientation orientation) {

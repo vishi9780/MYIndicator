@@ -24,8 +24,7 @@ import app.com.myprogressbar.R;
 
 public class IndicatorView extends View {
 
-    private static final String TAG="IndicatorView";
-
+    private static final String TAG = "IndicatorView";
 
 
     private static final int MIN_SHOW_TIME = 500; // ms
@@ -73,26 +72,26 @@ public class IndicatorView extends View {
 
     public IndicatorView(Context context) {
         super(context);
-        init(context, null,0,0);
+        init(context, null, 0, 0);
     }
 
     public IndicatorView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context, attrs,0, R.style.IndicatorView);
+        init(context, attrs, 0, R.style.IndicatorView);
     }
 
     public IndicatorView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context, attrs,defStyleAttr, R.style.IndicatorView);
+        init(context, attrs, defStyleAttr, R.style.IndicatorView);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public IndicatorView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init(context,attrs,defStyleAttr,R.style.IndicatorView);
+        init(context, attrs, defStyleAttr, R.style.IndicatorView);
     }
 
-    private void init(Context context,AttributeSet attrs,int defStyleAttr, int defStyleRes) {
+    private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         mMinWidth = 24;
         mMaxWidth = 48;
         mMinHeight = 24;
@@ -105,10 +104,10 @@ public class IndicatorView extends View {
         mMaxWidth = a.getDimensionPixelSize(R.styleable.IndicatorView_maxWidth, mMaxWidth);
         mMinHeight = a.getDimensionPixelSize(R.styleable.IndicatorView_minHeight, mMinHeight);
         mMaxHeight = a.getDimensionPixelSize(R.styleable.IndicatorView_maxHeight, mMaxHeight);
-        String indicatorName=a.getString(R.styleable.IndicatorView_indicatorName);
-        mIndicatorColor=a.getColor(R.styleable.IndicatorView_indicatorColor, Color.WHITE);
+        String indicatorName = a.getString(R.styleable.IndicatorView_indicatorName);
+        mIndicatorColor = a.getColor(R.styleable.IndicatorView_indicatorColor, Color.WHITE);
 //        setIndicator(indicatorName);
-        if (mIndicator==null){
+        if (mIndicator == null) {
 
             setmyIndicator(25);
         }
@@ -118,8 +117,9 @@ public class IndicatorView extends View {
     public Indicator getIndicator() {
         return mIndicator;
     }
-    public void setmyIndicator(int value){
-        switch (value){
+
+    public void setmyIndicator(int value) {
+        switch (value) {
             case 4:
                 setIndicator(IndicatorValues.DEFAULT_001_4);
                 break;
@@ -145,7 +145,7 @@ public class IndicatorView extends View {
                 setIndicator(IndicatorValues.DEFAULT_008_11);
                 break;
             case 12:
-                    setIndicator(IndicatorValues.DEFAULT_009_12);
+                setIndicator(IndicatorValues.DEFAULT_009_12);
                 break;
             case 13:
                 setIndicator(IndicatorValues.DEFAULT_010_13);
@@ -209,11 +209,12 @@ public class IndicatorView extends View {
                 setIndicator(IndicatorValues.DEFAULT_029_32);
                 break;
 
-                default:
-                    Log.e("208","<<<IndicatorView>>>"+"<<<Default Value");
+            default:
+                Log.e("208", "<<<IndicatorView>>>" + "<<<Default Value");
                 break;
         }
     }
+
     public void setIndicator(Indicator d) {
         if (mIndicator != d) {
             if (mIndicator != null) {
@@ -242,10 +243,11 @@ public class IndicatorView extends View {
      * setIndicatorColor(0xFF00FF00)
      * or
      * setIndicatorColor(getResources().getColor(android.R.color.black))
+     *
      * @param color
      */
-    public void setIndicatorColor(int color){
-        this.mIndicatorColor=color;
+    public void setIndicatorColor(int color) {
+        this.mIndicatorColor = color;
         mIndicator.setColor(color);
     }
 
@@ -256,15 +258,16 @@ public class IndicatorView extends View {
      * 1. Only class Name,like "SimpleIndicator".(This way would use default package name with
      * "com.wang.avi.indicators")
      * 2. Class name with full package,like "com.my.android.indicators.SimpleIndicator".
+     *
      * @param indicatorName the class must be extend Indicator .
      */
-    public void setIndicator(String indicatorName){
-        if (TextUtils.isEmpty(indicatorName)){
+    public void setIndicator(String indicatorName) {
+        if (TextUtils.isEmpty(indicatorName)) {
             return;
         }
-        StringBuilder drawableClassName=new StringBuilder();
-        if (!indicatorName.contains(".")){
-            String defaultPackageName=getClass().getPackage().getName();
+        StringBuilder drawableClassName = new StringBuilder();
+        if (!indicatorName.contains(".")) {
+            String defaultPackageName = getClass().getPackage().getName();
             drawableClassName.append(defaultPackageName)
                     .append(".indicators")
                     .append(".");
@@ -275,7 +278,7 @@ public class IndicatorView extends View {
             Indicator indicator = (Indicator) drawableClass.newInstance();
             setIndicator(indicator);
         } catch (ClassNotFoundException e) {
-            Log.e(TAG,"Didn't find your class , check the name again !");
+            Log.e(TAG, "Didn't find your class , check the name again !");
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -283,13 +286,13 @@ public class IndicatorView extends View {
         }
     }
 
-    public void smoothToShow(){
-        startAnimation(AnimationUtils.loadAnimation(getContext(),android.R.anim.fade_in));
+    public void smoothToShow() {
+        startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.fade_in));
         setVisibility(VISIBLE);
     }
 
-    public void smoothToHide(){
-        startAnimation(AnimationUtils.loadAnimation(getContext(),android.R.anim.fade_out));
+    public void smoothToHide() {
+        startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.fade_out));
         setVisibility(GONE);
     }
 

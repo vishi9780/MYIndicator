@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-
 /**
  * A TextView with justified text.<br>
  * The TextView has a ScrollingMovementMethod by default. You can change the MovementMethod,
@@ -45,8 +44,7 @@ public class JustifiedEditText extends EditText implements Justify.Justified {
             try {
                 // Setup ScaleXSpans on whitespaces to justify the text.
                 Justify.setupScaleSpans(this, mSpanStarts, mSpanEnds, mSpans);
-            }
-            finally {
+            } finally {
                 mMeasuring = false;
             }
         }

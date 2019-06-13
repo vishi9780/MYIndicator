@@ -8,33 +8,33 @@ import android.graphics.RectF;
  */
 
 public class Arc extends GraphicObject {
-  private RectF oval;
-  private float startAngle;
-  private float sweepAngle;
-  private boolean useCenter;
+    private RectF oval;
+    private float startAngle;
+    private float sweepAngle;
+    private boolean useCenter;
 
-  public void setOval(RectF oval) {
-    this.oval = oval;
-  }
+    public void setOval(RectF oval) {
+        this.oval = oval;
+    }
 
-  public void setStartAngle(float startAngle) {
-    this.startAngle = startAngle;
-  }
+    public void setStartAngle(float startAngle) {
+        this.startAngle = startAngle;
+    }
 
-  public void setSweepAngle(float sweepAngle) {
-    this.sweepAngle = sweepAngle;
-  }
+    public void setSweepAngle(float sweepAngle) {
+        this.sweepAngle = sweepAngle;
+    }
 
-  public void setUseCenter(boolean useCenter) {
-    this.useCenter = useCenter;
-  }
+    public void setUseCenter(boolean useCenter) {
+        this.useCenter = useCenter;
+    }
 
-  public float getStartAngle() {
-    return startAngle;
-  }
+    public float getStartAngle() {
+        return startAngle;
+    }
 
-  @Override
-  public void draw(Canvas canvas) {
-    canvas.drawArc(oval, startAngle, sweepAngle, useCenter, paint);
-  }
+    @Override
+    public void draw(Canvas canvas) {
+        canvas.drawArc(oval, startAngle, sweepAngle, useCenter, paint);
+    }
 }

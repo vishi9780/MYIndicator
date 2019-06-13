@@ -7,7 +7,7 @@ import app.com.myprogressbar.vy.callback.InvalidateListener;
 
 
 /**
- * Created by Tuyen Nguyen on 2/11/17.
+ * Created by VY on 2/5/18.
  */
 
 public abstract class LoaderView {

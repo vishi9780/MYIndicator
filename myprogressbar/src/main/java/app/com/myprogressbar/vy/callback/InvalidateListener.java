@@ -5,5 +5,5 @@ package app.com.myprogressbar.vy.callback;
  */
 
 public interface InvalidateListener {
-  void reDraw();
+    void reDraw();
 }

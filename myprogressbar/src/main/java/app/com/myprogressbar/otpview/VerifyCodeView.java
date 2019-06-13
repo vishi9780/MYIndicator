@@ -27,10 +27,6 @@ import java.lang.annotation.RetentionPolicy;
 
 import app.com.myprogressbar.R;
 
-/**
- * Created by yanwentao on 2016/10/20 0020.
- */
-
 public class VerifyCodeView extends View {
     private String TAG = "VerifyCodeView";
     private int mWidth;

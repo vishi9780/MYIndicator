@@ -4,7 +4,7 @@ package app.com.myprogressbar.customization.spinnerloader.utils;
  * Created by Vishal Yadav :- 173020181303HRS
  */
 public class SpinnerLoadingUtils {
-    public static  float[] getVector(float radians, float length) {
+    public static float[] getVector(float radians, float length) {
         float x = (float) (Math.cos(radians) * length);
         float y = (float) (Math.sin(radians) * length);
         return new float[]{

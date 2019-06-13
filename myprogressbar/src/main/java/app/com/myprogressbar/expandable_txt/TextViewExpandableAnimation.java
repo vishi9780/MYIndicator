@@ -42,100 +42,83 @@ public class TextViewExpandableAnimation extends LinearLayout
     private TextView tvState;
 
     /**
-     *
      * <br>shrink/expand icon
      */
     private ImageView ivExpandOrShrink;
 
     /**
-     *
      * <br>shrink/expand layout parent
      */
     private RelativeLayout rlToggleLayout;
 
     /**
-     *
      * <br>shrink drawable
      */
     private Drawable drawableShrink;
     /**
-     *
      * <br>expand drawable
      */
     private Drawable drawableExpand;
 
     /**
-     *
      * <br>color of shrink/expand text
      */
     private int textViewStateColor;
     /**
-     *
      * <br>expand text
      */
     private String textExpand;
     /**
-     *
      * <br>shrink text
      */
     private String textShrink;
 
     /**
-     *
      * <br>flag of shrink/expand
      */
     private boolean isShrink = false;
 
     /**
-     *
      * <br>flag of expand needed
      */
     private boolean isExpandNeeded = false;
 
     /**
-     *
      * <br>flag of TextView Initialization
      */
     private boolean isInitTextView = true;
 
     /**
-     *
      * <br>number of lines to expand
      */
     private int expandLines;
 
     /**
-     *
      * <br>Original number of lines
      */
     private int textLines;
 
     /**
-     *
      * <br>content text
      */
     private CharSequence textContent;
 
     /**
-     *
      * <br>content color
      */
     private int textContentColor;
 
     /**
-     *
      * <br>content text size
      */
     private float textContentSize;
 
     /**
-     *
      * <br>thread
      */
     private Thread thread;
 
     /**
-     *
      * <br>animation interval
      */
     private int sleepTime = 22;
@@ -148,13 +131,11 @@ public class TextViewExpandableAnimation extends LinearLayout
      */
     private final int WHAT = 2;
     /**
-     *
      * <br>animation end signal of handler
      */
     private final int WHAT_ANIMATION_END = 3;
 
     /**
-     *
      * <br>animation end and expand only,but not disappear
      */
     private final int WHAT_EXPAND_ONLY = 4;
@@ -282,9 +263,9 @@ public class TextViewExpandableAnimation extends LinearLayout
     };
 
     /**
-     * @param startIndex  <br> start index of animation
-     * @param endIndex    <br> end index of animation
-     * @param what        <br> signal of animation end
+     * @param startIndex <br> start index of animation
+     * @param endIndex   <br> end index of animation
+     * @param what       <br> signal of animation end
      */
     private void doAnimation(final int startIndex, final int endIndex,
                              final int what) {
@@ -332,6 +313,7 @@ public class TextViewExpandableAnimation extends LinearLayout
 
     /**
      * change shrink/expand state(only change state,but not hide shrink/expand icon)
+     *
      * @param endIndex
      */
     @SuppressWarnings("deprecation")
@@ -350,6 +332,7 @@ public class TextViewExpandableAnimation extends LinearLayout
 
     /**
      * change shrink/expand state(if number of expand lines bigger than original text lines,hide shrink/expand icon,and TextView will always be at expand state)
+     *
      * @param endIndex
      */
     @SuppressWarnings("deprecation")
@@ -453,6 +436,7 @@ public class TextViewExpandableAnimation extends LinearLayout
 
     /**
      * get content text
+     *
      * @return content text
      */
     public CharSequence getTextContent() {

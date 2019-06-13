@@ -15,20 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OtpVerificationActivity">
+        <activity android:name=".ProressBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".otpreader.SmsReceiver">
-            <intent-filter>
-                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
-            </intent-filter>
-        </receiver>
-
-        <activity android:name=".ProressBar" />
+        <activity android:name=".OtpVerificationActivity" />
         <activity android:name=".expandabletxt.RecyclerViewModeActivity"></activity>
         <activity android:name=".expandabletxt.NormalModeActivity"></activity>
     </application>

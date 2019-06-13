@@ -7,28 +7,19 @@ import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.content.LocalBroadcastManager;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import app.com.myindicator.expandabletxt.NormalModeActivity;
 import app.com.myindicator.expandabletxt.RecyclerViewModeActivity;
 import app.com.myprogressbar.customsplash.ParticleView;
 import app.com.myprogressbar.justification_txt_edit_txt.JustifiedTextView;
 import app.com.myprogressbar.mygradient.GradientLinearLayout;
-import app.com.myprogressbar.otpview.VerifyCodeView;
-import app.com.myprogressbar.otpview.otpCatcher.OnSmsCatchListener;
-import app.com.myprogressbar.otpview.otpCatcher.SmsVerifyCatcher;
 import app.com.myprogressbar.toastcustomization.YummyToast;
 
 
@@ -38,9 +29,8 @@ public class OtpVerificationActivity extends AppCompatActivity {
     JustifiedTextView tv_txt;
     private String otp_generated,contactNo,id1;
     private ParticleView prVw_particle;
-    private SmsVerifyCatcher smsVerifyCatcher;
     GradientLinearLayout activity_otp_verifications;
-    VerifyCodeView verfiy_cview;
+//    VerifyCodeView verfiy_cview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,23 +43,9 @@ public class OtpVerificationActivity extends AppCompatActivity {
         final ParticleView prVw_particle = findViewById(R.id.prVw_particle);
         prVw_particle.startAnim();
 
-        verfiy_cview=(VerifyCodeView)findViewById(R.id.verfiy_cview);
+//        verfiy_cview=(VerifyCodeView)findViewById(R.id.verfiy_cview);
 
-        //init SmsVerifyCatcher
 
-        smsVerifyCatcher = new SmsVerifyCatcher(this, new OnSmsCatchListener<String>() {
-            @Override
-            public void onSmsCatch(String message) {
-                String code = parseCode(message);//Parse verification code
-                verfiy_cview.setText(code);
-                //set code in edit text
-                //then you can send verification code to server
-            }
-        });
-
-        //set phone number filter if needed
-        smsVerifyCatcher.setPhoneNumberFilter("777");
-        //smsVerifyCatcher.setFilter("regexp");
         findViewById(R.id.btn_normal_mode).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -127,25 +103,7 @@ public class OtpVerificationActivity extends AppCompatActivity {
         return code;
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        smsVerifyCatcher.onStart();
-    }
-    @Override
-    protected void onStop() {
-        super.onStop();
-        smsVerifyCatcher.onStop();
 
-    }
-    /**
-     * need for Android 6 real time permissions
-     */
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        smsVerifyCatcher.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
     @Override
     public void onResume() {
         LocalBroadcastManager.getInstance(this).registerReceiver(receiver, new IntentFilter("otp"));
@@ -161,7 +119,6 @@ public class OtpVerificationActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equalsIgnoreCase("otp")) {
                 final String message = intent.getStringExtra("message");
-
                 Log.e("48","<<<<>>>>"+message.substring(10));
                 ed.setText(message.substring(10,16));
                 // message is the fetching OTP

@@ -1,5 +1,6 @@
 package app.com.myprogressbar.otpview;
 
+
 import android.content.Context;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
@@ -7,8 +8,9 @@ import android.view.WindowManager;
 public class UIUtils {
     private static int screenWidth = 0;
     private static int screenHeight = 0;
+
     public static int getWidth(Context context) {
-        if (screenWidth <=0) {
+        if (screenWidth <= 0) {
             readScreenInfo(context);
         }
         return screenWidth;
@@ -27,8 +29,8 @@ public class UIUtils {
         WindowManager wm = (WindowManager) context
                 .getSystemService(Context.WINDOW_SERVICE);
         DisplayMetrics outMetrics = new DisplayMetrics();
-        wm.getDefaultDisplay().getMetrics(outMetrics );
-        screenHeight =outMetrics.heightPixels;
+        wm.getDefaultDisplay().getMetrics(outMetrics);
+        screenHeight = outMetrics.heightPixels;
         screenWidth = outMetrics.widthPixels;
     }
 }

@@ -18,8 +18,9 @@ public class GradientTableLayout extends TableLayout {
 
     /**
      * <p>Configure the gradient background for this layout.</p>
-     * @param startColor The start color for the gradient
-     * @param endColor The end color for the gradient
+     *
+     * @param startColor  The start color for the gradient
+     * @param endColor    The end color for the gradient
      * @param orientation The orientation for the gradient {@link  GradientDrawable.Orientation  GradientDrawable.Orientation}
      */
     public void setGradientBackgroundConfig(final int startColor, final int endColor, final GradientDrawable.Orientation orientation) {
@@ -32,6 +33,7 @@ public class GradientTableLayout extends TableLayout {
 
     /**
      * <p>Configure the start color for the gradient background for this layout.</p>
+     *
      * @param startColor The start color for the gradient
      */
     public GradientTableLayout setStartColor(final int startColor) {
@@ -41,6 +43,7 @@ public class GradientTableLayout extends TableLayout {
 
     /**
      * <p>Configure the end color for the gradient background for this layout.</p>
+     *
      * @param endColor The end color for the gradient
      */
     public GradientTableLayout setEndColor(final int endColor) {
@@ -55,6 +58,7 @@ public class GradientTableLayout extends TableLayout {
 
     /**
      * <p>Configure the top right corner radius</p>
+     *
      * @param radius The radius to set
      */
     public GradientTableLayout setRadiusCornerTopRight(final float radius) {
@@ -64,6 +68,7 @@ public class GradientTableLayout extends TableLayout {
 
     /**
      * <p>Configure the top left corner radius</p>
+     *
      * @param radius The radius to set
      */
     public GradientTableLayout setRadiusCornerBottomRight(final float radius) {
@@ -73,6 +78,7 @@ public class GradientTableLayout extends TableLayout {
 
     /**
      * <p>Configure the top left corner radius</p>
+     *
      * @param radius The radius to set
      */
     public GradientTableLayout setRadiusCornerBottomLeft(final float radius) {
@@ -83,6 +89,7 @@ public class GradientTableLayout extends TableLayout {
 
     /**
      * <p>Configure the orientation for the gradient background for this layout.</p>
+     *
      * @param orientation The orientation for the gradient {@link  GradientDrawable.Orientation  GradientDrawable.Orientation}
      */
     public GradientTableLayout setOrientation(final GradientDrawable.Orientation orientation) {

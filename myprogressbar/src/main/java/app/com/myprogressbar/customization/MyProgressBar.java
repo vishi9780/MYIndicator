@@ -32,9 +32,10 @@ public class MyProgressBar extends Dialog {
     public static ImageView imageView;
     public static SpinnerLoading spinner_loading;
     public static RotateLoading rotateLoading;
-    public static boolean isIs_0=false,isIs_1=false,isIs_2=false,isIs_3=false;
+    public static boolean isIs_0 = false, isIs_1 = false, isIs_2 = false, isIs_3 = false;
     public static MyProgressBar dialog;
     public static IndicatorView myIndicator_vw;
+
     public MyProgressBar(Context context) {
         super(context);
     }
@@ -44,8 +45,8 @@ public class MyProgressBar extends Dialog {
     }
 
     public static MyProgressBar show(Context context, CharSequence message, boolean indeterminate, boolean cancelable,
-                                     OnCancelListener cancelListener,int myLoaderValue) {
-         dialog = new MyProgressBar(context, R.style.ProgressHUD);
+                                     OnCancelListener cancelListener, int myLoaderValue) {
+        dialog = new MyProgressBar(context, R.style.ProgressHUD);
         dialog.setTitle("");
         dialog.setContentView(R.layout.progress_hud);
         initViews(dialog);
@@ -72,36 +73,35 @@ public class MyProgressBar extends Dialog {
     }
 
 
-
     private static void initViews(MyProgressBar dialog) {
-        ll_parent= (LinearLayout) dialog. findViewById(R.id.ll_parent);
+        ll_parent = (LinearLayout) dialog.findViewById(R.id.ll_parent);
         txt = (TextView) dialog.findViewById(R.id.message);
 
 
-        myBallCradleLoading=(MyBallCradleLoading)dialog.findViewById(R.id.myBallCradleLoading);
-        rotateLoading=(RotateLoading) dialog.findViewById(R.id.rotateLoading);
-        imageView = (ImageView)dialog. findViewById(R.id.spinnerImageView);
-        spinner_loading = (SpinnerLoading)dialog. findViewById(R.id.spinner_loading);
-        myIndicator_vw=(IndicatorView)dialog.findViewById(R.id.myIndicator_vw);
-        vy_loader=(VYLoader)dialog.findViewById(R.id.vy_loader);
+        myBallCradleLoading = (MyBallCradleLoading) dialog.findViewById(R.id.myBallCradleLoading);
+        rotateLoading = (RotateLoading) dialog.findViewById(R.id.rotateLoading);
+        imageView = (ImageView) dialog.findViewById(R.id.spinnerImageView);
+        spinner_loading = (SpinnerLoading) dialog.findViewById(R.id.spinner_loading);
+        myIndicator_vw = (IndicatorView) dialog.findViewById(R.id.myIndicator_vw);
+        vy_loader = (VYLoader) dialog.findViewById(R.id.vy_loader);
 
     }
 
     @Override
     protected void onStop() {
-        if (isIs_0==true){
+        if (isIs_0 == true) {
             dialog.dismiss();
-            isIs_0=false;
-        }else if (isIs_1==true){
+            isIs_0 = false;
+        } else if (isIs_1 == true) {
             dialog.dismiss();
-            isIs_1=false;
-        }else if (isIs_2==true){
+            isIs_1 = false;
+        } else if (isIs_2 == true) {
             myBallCradleLoading.stop();
-            isIs_2=false;
-        }else if (isIs_3==true){
+            isIs_2 = false;
+        } else if (isIs_3 == true) {
             rotateLoading.stop();
-            isIs_3=false;
-        }else {
+            isIs_3 = false;
+        } else {
 
         }
         super.onStop();
@@ -109,19 +109,19 @@ public class MyProgressBar extends Dialog {
 
     @Override
     public void show() {
-        if (isIs_0==true){
+        if (isIs_0 == true) {
             spinner_loading.setVisibility(View.VISIBLE);
-            isIs_0=false;
-        }else if (isIs_1==true){
+            isIs_0 = false;
+        } else if (isIs_1 == true) {
             imageView.setVisibility(View.VISIBLE);
-            isIs_1=false;
-        }else if (isIs_2==true){
+            isIs_1 = false;
+        } else if (isIs_2 == true) {
             myBallCradleLoading.start();
-            isIs_2=false;
-        }else if (isIs_3==true){
+            isIs_2 = false;
+        } else if (isIs_3 == true) {
             rotateLoading.start();
-            isIs_3=false;
-        }else {
+            isIs_3 = false;
+        } else {
 
         }
         super.show();

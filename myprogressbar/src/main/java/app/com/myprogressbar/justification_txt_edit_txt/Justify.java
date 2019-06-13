@@ -12,7 +12,6 @@ import android.text.style.ScaleXSpan;
 import android.widget.TextView;
 
 
-
 class Justify {
 
     private static final Pattern WHITESPACE_PATTERN = Pattern.compile("\\s");
@@ -21,10 +20,11 @@ class Justify {
 
     /**
      * Adds ScaleX spans to expand widespaces and justify the lines.
-     * @param justified the justified TextView.
-     * @param textViewSpanEnds a preallocated array that will hold the span end positions.
+     *
+     * @param justified          the justified TextView.
+     * @param textViewSpanEnds   a preallocated array that will hold the span end positions.
      * @param textViewSpanStarts a preallocated array that will hold the span start positions.
-     * @param textViewSpans a preallocated array that will hold the spans.
+     * @param textViewSpans      a preallocated array that will hold the spans.
      */
     static void setupScaleSpans(final @NotNull Justified justified,
                                 final @NotNull int[] textViewSpanStarts,
@@ -37,21 +37,21 @@ class Justify {
 
         // The text should be a spannable already because we set a movement method.
         if (!(text instanceof Spannable)) return;
-        final Spannable spannable = (Spannable)text;
+        final Spannable spannable = (Spannable) text;
         final int length = spannable.length();
         if (length == 0) return;
 
         // Remove any existing ScaleXSpan (from a previous pass).
         final ScaleSpan[] scaleSpans = spannable.getSpans(0, spannable.length(), ScaleSpan.class);
         if (scaleSpans != null) {
-            for (final ScaleSpan span: scaleSpans) {
+            for (final ScaleSpan span : scaleSpans) {
                 spannable.removeSpan(span);
             }
         }
 
         // We use the layout to get line widths before justification
         final Layout layout = textView.getLayout();
-        assert(layout != null);
+        assert (layout != null);
         final int count = layout.getLineCount();
         if (count < 2) return;
 
@@ -62,13 +62,12 @@ class Justify {
         // We won't justify lines if it requires expanding the spaces beyond the maximum proportion.
         final float maxProportion;
         if (textView instanceof Justified) {
-            maxProportion = ((Justified)textView).getMaxProportion();
-        }
-        else {
+            maxProportion = ((Justified) textView).getMaxProportion();
+        } else {
             maxProportion = DEFAULT_MAX_PROPORTION;
         }
 
-        for (int line=0; line<count; ++line) {
+        for (int line = 0; line < count; ++line) {
 
             final int lineStart = layout.getLineStart(line);
             final int lineEnd = line == count - 1 ? length : layout.getLineEnd(line);
@@ -94,7 +93,7 @@ class Justify {
             final float w = Layout.getDesiredWidth(spannable, lineStart, lineEnd, layout.getPaint());
 
             // Remaining space to fill
-            int remaining = (int)Math.floor(want - w);
+            int remaining = (int) Math.floor(want - w);
 
             if (remaining > 0) {
                 // Make sure trailing whitespace doesn't use any space by setting its scaleX to 0
@@ -127,7 +126,7 @@ class Justify {
                         final int c = sub.charAt(matchStart);
                         if (c == '\u200a' || c == '\u2009' || c == '\u00a0') continue;
                     }
-                    assert(layout.getPaint() != null);
+                    assert (layout.getPaint() != null);
                     final float matchWidth =
                             layout.getPaint().measureText(spannable, lineStart + matchStart, lineStart + matchEnd);
 
@@ -149,7 +148,7 @@ class Justify {
                 if (proportion > maxProportion) continue;
 
                 // Add ScaleX spans on the whitespace sections we want to expand.
-                for (int span=0; span<n; ++span) {
+                for (int span = 0; span < n; ++span) {
                     textViewSpans[span] = new ScaleSpan(proportion);
                     spannable.setSpan(
                             textViewSpans[span],
@@ -158,7 +157,7 @@ class Justify {
                             Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
                 }
                 // Compute the excess space.
-                int excess = (int)Math.ceil(Layout.getDesiredWidth(spannable,
+                int excess = (int) Math.ceil(Layout.getDesiredWidth(spannable,
                         lineStart, lineEnd,
                         layout.getPaint())) - want;
                 // We might have added too much space because of rounding errors and because adding spans
@@ -172,14 +171,14 @@ class Justify {
                                 "Could not compensate for excess space (" + excess + "px).");
                     }
                     // Clear the spans from the previous attempt.
-                    for (int span=0; span<n; ++span) {
+                    for (int span = 0; span < n; ++span) {
                         spannable.removeSpan(textViewSpans[span]);
                     }
                     // Reduce the remaining space exponentially for each iteration.
                     remaining -= (excess + loop * loop);
                     // Set the spans with the new proportions.
                     final float reducedProportions = (spaceWidth + remaining) / spaceWidth;
-                    for (int span=0; span<n; ++span) {
+                    for (int span = 0; span < n; ++span) {
                         textViewSpans[span] = new ScaleSpan(reducedProportions);
                         spannable.setSpan(
                                 textViewSpans[span],
@@ -188,7 +187,7 @@ class Justify {
                                 Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
                     }
                     // recompute the excess space.
-                    excess = (int)Math.ceil(Layout.getDesiredWidth(spannable,
+                    excess = (int) Math.ceil(Layout.getDesiredWidth(spannable,
                             lineStart, lineEnd,
                             layout.getPaint())) - want;
                 }
@@ -200,6 +199,7 @@ class Justify {
 
         /**
          * Gets the TextView (usually the class implementing this interface).
+         *
          * @return the TextView.
          */
         @NotNull
@@ -208,6 +208,7 @@ class Justify {
         /**
          * Gets the maximum stretching proportion allowed for whitespaces. Lines that require
          * expanding whitespace beyond this proportion to be justified will not be justified.
+         *
          * @return the maximum stretching proportion allowed.
          */
         public float getMaxProportion();

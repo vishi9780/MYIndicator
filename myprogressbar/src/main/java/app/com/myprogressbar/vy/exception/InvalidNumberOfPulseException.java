@@ -6,8 +6,8 @@ package app.com.myprogressbar.vy.exception;
 
 public class InvalidNumberOfPulseException extends Exception {
 
-  @Override
-  public String getMessage() {
-    return "The number of pulse must be between 2 and 6";
-  }
+    @Override
+    public String getMessage() {
+        return "The number of pulse must be between 2 and 6";
+    }
 }

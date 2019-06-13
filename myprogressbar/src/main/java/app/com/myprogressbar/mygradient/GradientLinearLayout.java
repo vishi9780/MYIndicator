@@ -12,18 +12,18 @@ public class GradientLinearLayout extends LinearLayout {
     private final GradientBackground gradientBackground;
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public GradientLinearLayout( final Context context,
-                                 final AttributeSet attrs,
-                                 final int defStyleAttr,
-                                 final int defStyleRes) {
+    public GradientLinearLayout(final Context context,
+                                final AttributeSet attrs,
+                                final int defStyleAttr,
+                                final int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         this.gradientBackground = new GradientBackground(context, attrs);
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public GradientLinearLayout( final Context context,
-                                 final AttributeSet attrs,
-                                 final int defStyleAttr) {
+    public GradientLinearLayout(final Context context,
+                                final AttributeSet attrs,
+                                final int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.gradientBackground = new GradientBackground(context, attrs);
     }
@@ -36,8 +36,9 @@ public class GradientLinearLayout extends LinearLayout {
 
     /**
      * <p>Configure the gradient background for this layout.</p>
-     * @param startColor The start color for the gradient
-     * @param endColor The end color for the gradient
+     *
+     * @param startColor  The start color for the gradient
+     * @param endColor    The end color for the gradient
      * @param orientation The orientation for the gradient {@link  GradientDrawable.Orientation  GradientDrawable.Orientation}
      */
     public void setGradientBackgroundConfig(final int startColor, final int endColor, final GradientDrawable.Orientation orientation) {
@@ -50,6 +51,7 @@ public class GradientLinearLayout extends LinearLayout {
 
     /**
      * <p>Configure the start color for the gradient background for this layout.</p>
+     *
      * @param startColor The start color for the gradient
      */
     public GradientLinearLayout setStartColor(final int startColor) {
@@ -59,6 +61,7 @@ public class GradientLinearLayout extends LinearLayout {
 
     /**
      * <p>Configure the end color for the gradient background for this layout.</p>
+     *
      * @param endColor The end color for the gradient
      */
     public GradientLinearLayout setEndColor(final int endColor) {
@@ -73,6 +76,7 @@ public class GradientLinearLayout extends LinearLayout {
 
     /**
      * <p>Configure the top right corner radius</p>
+     *
      * @param radius The radius to set
      */
     public GradientLinearLayout setRadiusCornerTopRight(final float radius) {
@@ -82,6 +86,7 @@ public class GradientLinearLayout extends LinearLayout {
 
     /**
      * <p>Configure the top left corner radius</p>
+     *
      * @param radius The radius to set
      */
     public GradientLinearLayout setRadiusCornerBottomRight(final float radius) {
@@ -91,6 +96,7 @@ public class GradientLinearLayout extends LinearLayout {
 
     /**
      * <p>Configure the top left corner radius</p>
+     *
      * @param radius The radius to set
      */
     public GradientLinearLayout setRadiusCornerBottomLeft(final float radius) {
@@ -100,6 +106,7 @@ public class GradientLinearLayout extends LinearLayout {
 
     /**
      * <p>Configure the orientation for the gradient background for this layout.</p>
+     *
      * @param orientation The orientation for the gradient {@link  GradientDrawable.Orientation  GradientDrawable.Orientation}
      */
     public GradientLinearLayout setOrientation(final GradientDrawable.Orientation orientation) {

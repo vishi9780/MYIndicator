@@ -15,8 +15,10 @@ import android.graphics.RectF;
 import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.View;
+
 import java.util.ArrayList;
 import java.util.Collection;
+
 import app.com.myprogressbar.R;
 
 public class ParticleView extends View {

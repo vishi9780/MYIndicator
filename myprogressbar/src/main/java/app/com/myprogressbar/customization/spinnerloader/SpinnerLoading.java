@@ -28,7 +28,7 @@ public class SpinnerLoading extends View implements CallbackAnimation.Transforma
     public static final int DEFAULT_itemCount = 8;
     public static final int DEFAULT_CIRCLE_COLOR = Color.WHITE;
     public static final int DEFAULT_CIRCLE_COLOR_MOVE = Color.WHITE;
-//    public static final int DEFAULT_CIRCLE_COLOR = 0xff33A7ff;
+    //    public static final int DEFAULT_CIRCLE_COLOR = 0xff33A7ff;
 //    public static final int DEFAULT_CIRCLE_COLOR_MOVE = 0xff33A7ff;
     public static final float DEFAULT_SCALE_RATE = 0.2f;
     public static final int DEFAULT_RADIUS = 20;
@@ -55,7 +55,7 @@ public class SpinnerLoading extends View implements CallbackAnimation.Transforma
     }
 
     public SpinnerLoading(Context context, AttributeSet attrs) {
-        this(context, attrs,0);
+        this(context, attrs, 0);
     }
 
     public SpinnerLoading(Context context, AttributeSet attrs, int defStyleAttr) {

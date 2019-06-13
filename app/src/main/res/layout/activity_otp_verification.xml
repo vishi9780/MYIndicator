@@ -33,11 +33,7 @@
                 android:layout_margin="25dp"
                 android:hint="OTP Here"
                 />
-            <app.com.myprogressbar.otpview.VerifyCodeView
-                android:id="@+id/verfiy_cview"
-                android:layout_width="200dp"
-                android:layout_gravity="center"
-                android:layout_height="@dimen/_50dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
